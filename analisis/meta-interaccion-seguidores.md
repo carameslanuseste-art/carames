@@ -182,3 +182,27 @@ puede gastar y medir con el número correcto.
   son evidencia circunstancial, sólida pero indirecta.
 - La atribución de seguidores no incluye a quien descubrió la cuenta por un
   anuncio y la siguió días después de forma orgánica.
+
+---
+
+## Runbook de ejecución
+
+Checklist paso a paso para hacer los cambios en el Administrador de anuncios:
+`runbook-campana-interaccion.html` — también publicado en
+https://claude.ai/code/artifact/ebc9d25f-2533-4b1a-be57-e1361e7213b1
+
+Reparto de presupuesto propuesto sobre los $7.500 diarios actuales:
+
+| Conjunto | Ubicación única | Presupuesto diario |
+|---|---|---:|
+| `SEG / IG Reels` | Instagram Reels | $3.000 |
+| `SEG / IG Stories` | Instagram Historias | $2.600 |
+| `SEG / IG Feed` | Instagram Feed | $1.900 |
+
+Configuración común a los tres: ubicaciones manuales (una sola cada uno),
+Facebook y Audience Network apagados, edad 18–54, audiencia original en lugar de
+Advantage+ para que el corte de edad se respete, geo sin cambios (Lanús +17 km) y
+exclusiones de `Seguidores de instagram` y `Seguidores de facebook` intactas.
+
+Regla de corte: pausar cualquier anuncio arriba de $600 por seguidor tras 7 días
+y $15.000 gastados.

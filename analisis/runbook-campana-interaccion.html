@@ -1,0 +1,462 @@
+<title>Reconstruir la campaña de interacción</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;450;500;600&display=swap">
+
+<style>
+:root{
+  --paper:#F5F7F9; --surface:#FFFFFF; --surface-2:#EDF1F5;
+  --ink:#141D26; --ink-2:#43535F; --ink-3:#7D8C99;
+  --rule:#D9E1E8; --rule-strong:#B9C6D1;
+  --alert:#BE3A2B; --alert-soft:#F6E4E1;
+  --go:#0F8A70; --go-soft:#DDEFE9;
+  --warn:#D99A21; --warn-soft:#F8EDD8;
+  --neutral:#4A63C8; --neutral-soft:#E2E6F7;
+  --shadow:0 1px 2px rgba(20,29,38,.06), 0 8px 24px -12px rgba(20,29,38,.14);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#12171C; --surface:#1A2128; --surface-2:#232C34;
+    --ink:#E9EFF4; --ink-2:#A9B8C4; --ink-3:#76858F;
+    --rule:#2C363F; --rule-strong:#3D4A55;
+    --alert:#CF5341; --alert-soft:#33201C;
+    --go:#219A79; --go-soft:#132C26;
+    --warn:#B5892B; --warn-soft:#2C2416;
+    --neutral:#7183D6; --neutral-soft:#1E2440;
+    --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 24px -12px rgba(0,0,0,.6);
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#12171C; --surface:#1A2128; --surface-2:#232C34;
+  --ink:#E9EFF4; --ink-2:#A9B8C4; --ink-3:#76858F;
+  --rule:#2C363F; --rule-strong:#3D4A55;
+  --alert:#CF5341; --alert-soft:#33201C;
+  --go:#219A79; --go-soft:#132C26;
+  --warn:#B5892B; --warn-soft:#2C2416;
+  --neutral:#7183D6; --neutral-soft:#1E2440;
+  --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 24px -12px rgba(0,0,0,.6);
+}
+
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);
+  font-family:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+.wrap{max-width:54rem;margin:0 auto;padding:0 1.5rem 6rem}
+
+h1,h2,h3{font-family:Newsreader,Georgia,"Times New Roman",serif;font-weight:500;text-wrap:balance;margin:0}
+h1{font-size:clamp(2.1rem,4.8vw,3.1rem);line-height:1.07;letter-spacing:-.02em}
+h2{font-size:clamp(1.5rem,3vw,1.95rem);line-height:1.15;letter-spacing:-.015em}
+h3{font-size:1.1rem;line-height:1.3;font-weight:600;font-family:"IBM Plex Sans",sans-serif}
+p{margin:0 0 1em}
+strong{font-weight:600}
+.lede{font-size:1.15rem;line-height:1.55;color:var(--ink-2);max-width:36rem}
+.col{max-width:40rem}
+.mono{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:.87em;
+  background:var(--surface-2);padding:.12em .4em;border-radius:3px;word-break:break-word}
+.ui{font-weight:600;color:var(--ink)}
+.eyebrow{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:.7rem;font-weight:500;
+  letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3)}
+
+header.mast{padding:4rem 0 0}
+.mast-meta{display:flex;flex-wrap:wrap;gap:.5rem 1.25rem;align-items:baseline;
+  padding-bottom:1.3rem;margin-bottom:2rem;border-bottom:1px solid var(--rule)}
+.mast-meta .sep{color:var(--rule-strong)}
+.mast-lede{margin-top:1.4rem}
+
+.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--rule);
+  border:1px solid var(--rule);border-radius:3px;overflow:hidden;margin:2.2rem 0 0}
+.fact{background:var(--surface);padding:1.1rem 1.3rem 1.2rem}
+.fact .k{font-family:"IBM Plex Mono",monospace;font-size:.63rem;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--ink-3);display:block;margin-bottom:.45rem}
+.fact .v{font-size:1.02rem;font-weight:600;display:block;line-height:1.3}
+@media (max-width:700px){.facts{grid-template-columns:1fr}}
+
+/* phases */
+.phase{margin-top:3.4rem;scroll-margin-top:4.5rem}
+ol.steps > li{scroll-margin-top:4.5rem}
+.phase-head{display:flex;align-items:baseline;gap:.9rem;padding-bottom:.8rem;
+  margin-bottom:1.5rem;border-bottom:2px solid var(--ink)}
+.phase-n{flex:none;font-family:"IBM Plex Mono",monospace;font-size:.72rem;font-weight:600;
+  letter-spacing:.1em;text-transform:uppercase;color:var(--surface);background:var(--ink);
+  padding:.28rem .5rem;border-radius:3px}
+.phase-t{font-family:"IBM Plex Mono",monospace;font-size:.68rem;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--ink-3);margin-left:auto;white-space:nowrap}
+
+/* checklist */
+ol.steps{list-style:none;margin:0;padding:0;counter-reset:s}
+ol.steps > li{counter-increment:s;background:var(--surface);border:1px solid var(--rule);
+  border-radius:3px;margin-bottom:.7rem;padding:1.05rem 1.3rem 1.1rem 1.3rem;
+  display:grid;grid-template-columns:auto 1fr;gap:.95rem;align-items:start}
+ol.steps > li.done{opacity:.55}
+ol.steps > li.done .st-t{text-decoration:line-through;text-decoration-color:var(--ink-3)}
+.cb{appearance:none;-webkit-appearance:none;flex:none;width:22px;height:22px;margin:.15rem 0 0;
+  border:1.5px solid var(--rule-strong);border-radius:4px;background:var(--surface);
+  cursor:pointer;position:relative;transition:background .12s,border-color .12s}
+.cb:hover{border-color:var(--go)}
+.cb:checked{background:var(--go);border-color:var(--go)}
+.cb:checked::after{content:"";position:absolute;left:7px;top:3px;width:5px;height:10px;
+  border:solid #fff;border-width:0 2.5px 2.5px 0;transform:rotate(42deg)}
+.st-t{font-weight:600;display:block;margin-bottom:.25rem}
+.st-t::before{content:counter(s) ". ";color:var(--ink-3);font-family:"IBM Plex Mono",monospace;
+  font-size:.85em;font-weight:500}
+.st-d{font-size:.94rem;color:var(--ink-2);margin:0}
+.st-d + .st-d{margin-top:.5rem}
+
+.note{margin:1.1rem 0 0;padding:.95rem 1.2rem;border-radius:3px;font-size:.92rem;
+  border-left:3px solid var(--neutral);background:var(--neutral-soft);color:var(--ink-2)}
+.note.warn{border-left-color:var(--warn);background:var(--warn-soft)}
+.note.stop{border-left-color:var(--alert);background:var(--alert-soft)}
+.note.ok{border-left-color:var(--go);background:var(--go-soft)}
+.note p{margin:0}
+.note p + p{margin-top:.55rem}
+.note b{color:var(--ink)}
+.note .eyebrow{display:block;margin-bottom:.4rem;color:var(--ink-3)}
+
+.tbl{overflow-x:auto;margin:1.6rem 0;border:1px solid var(--rule);border-radius:3px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;font-size:.9rem;min-width:34rem}
+th,td{padding:.65rem .95rem;text-align:left;border-bottom:1px solid var(--rule);vertical-align:top}
+thead th{font-family:"IBM Plex Mono",monospace;font-size:.64rem;font-weight:500;
+  letter-spacing:.09em;text-transform:uppercase;color:var(--ink-3);
+  background:var(--surface-2);white-space:nowrap}
+tbody tr:last-child td{border-bottom:0}
+td.n{font-family:"IBM Plex Mono",monospace;font-variant-numeric:tabular-nums;white-space:nowrap}
+tbody td:first-child{font-weight:600}
+
+.progress{position:sticky;top:0;z-index:5;background:var(--paper);padding:.85rem 0 .8rem;
+  margin-bottom:-.5rem;border-bottom:1px solid var(--rule);
+  display:flex;align-items:center;gap:.9rem;font-size:.85rem;color:var(--ink-2)}
+.bar{flex:1;height:6px;background:var(--surface-2);border-radius:3px;overflow:hidden}
+.bar i{display:block;height:100%;width:0;background:var(--go);border-radius:3px;transition:width .2s}
+.pct{font-family:"IBM Plex Mono",monospace;font-weight:600;color:var(--ink);
+  font-variant-numeric:tabular-nums;white-space:nowrap}
+.reset{font:inherit;font-size:.8rem;color:var(--ink-3);background:none;border:0;
+  cursor:pointer;text-decoration:underline;padding:0;white-space:nowrap}
+.reset:hover{color:var(--ink)}
+
+footer{margin-top:4rem;padding-top:1.4rem;border-top:1px solid var(--rule);
+  font-size:.85rem;color:var(--ink-3)}
+footer p{margin-bottom:.6rem;max-width:44rem}
+:focus-visible{outline:2px solid var(--neutral);outline-offset:2px;border-radius:2px}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+
+<div class="wrap">
+
+<header class="mast">
+  <div class="mast-meta eyebrow">
+    <span>Caramés Lanús Este</span><span class="sep">/</span>
+    <span>Runbook</span><span class="sep">/</span>
+    <span>27 agosto 2026</span>
+  </div>
+
+  <h1>Reconstruir la campaña de interacción</h1>
+
+  <p class="lede mast-lede">Paso a paso para pasar de un conjunto con ubicaciones automáticas a tres conjuntos con presupuesto propio. Andá tildando a medida que avanzás — el progreso queda guardado en este navegador.</p>
+
+  <div class="facts">
+    <div class="fact">
+      <span class="k">Dónde</span>
+      <span class="v">Administrador de anuncios</span>
+      <span class="st-d">Cuenta «Caramés Bienes Raices - Sucursal Lanús Este»</span>
+    </div>
+    <div class="fact">
+      <span class="k">Qué vas a tocar</span>
+      <span class="v">Campaña de interacción</span>
+      <span class="st-d">Activa desde el 8/4/2026 · $7.500 diarios</span>
+    </div>
+    <div class="fact">
+      <span class="k">Cuánto lleva</span>
+      <span class="v">45 a 60 minutos</span>
+      <span class="st-d">Más el tiempo de editar los videos nuevos</span>
+    </div>
+  </div>
+
+  <div class="note warn">
+    <span class="eyebrow">Elegí bien el día</span>
+    <p>No arranques un viernes ni antes de irte de viaje. Los conjuntos nuevos entran en fase de aprendizaje y los primeros tres días son los más ruidosos: conviene que puedas mirarlos.</p>
+  </div>
+</header>
+
+<div class="progress">
+  <span>Progreso</span>
+  <span class="bar"><i id="bar"></i></span>
+  <span class="pct" id="pct">0 / 0</span>
+  <button class="reset" id="reset" type="button">Reiniciar</button>
+</div>
+
+<section class="phase">
+  <div class="phase-head">
+    <span class="phase-n">Fase 1</span>
+    <h2>Apagar el presupuesto de campaña</h2>
+    <span class="phase-t">10 min</span>
+  </div>
+
+  <div class="col">
+    <p>Sin esto, nada de lo que sigue funciona. Hoy el presupuesto está a nivel campaña y es Meta quien decide cuánto le toca a cada conjunto — por eso repartió $292.520 a uno y $18.172 al otro.</p>
+  </div>
+
+  <ol class="steps">
+    <li><input type="checkbox" class="cb"><div>
+      <span class="st-t">Abrí la campaña en modo edición</span>
+      <p class="st-d">En la pestaña <span class="ui">Campañas</span>, tildá el casillero de <span class="ui">Campaña de interacción</span> y hacé clic en <span class="ui">Editar</span>. Se abre el panel lateral.</p>
+    </div></li>
+
+    <li><input type="checkbox" class="cb"><div>
+      <span class="st-t">Buscá el interruptor del presupuesto Advantage</span>
+      <p class="st-d">Aparece como <span class="ui">Presupuesto de campaña Advantage</span>. En cuentas más viejas figura como <span class="ui">Optimización del presupuesto de la campaña</span> o CBO — es lo mismo.</p>
+    </div></li>
+
+    <li><input type="checkbox" class="cb"><div>
+      <span class="st-t">Apagalo</span>
+      <p class="st-d">Al desactivarlo, el campo de presupuesto desaparece del nivel campaña y pasa a pedirse en cada conjunto. Es lo que buscamos.</p>
+    </div></li>
+
+    <li><input type="checkbox" class="cb"><div>
+      <span class="st-t">Publicá y verificá</span>
+      <p class="st-d">Guardá los cambios. En la lista de campañas, la columna <span class="ui">Presupuesto</span> tiene que pasar de decir «$7.500 diarios» a <span class="ui">Usar presupuesto del conjunto de anuncios</span>. Si sigue mostrando un monto, no se guardó.</p>
+    </div></li>
+  </ol>
+
+  <div class="note stop">
+    <span class="eyebrow">Si el interruptor está bloqueado</span>
+    <p>En algunas cuentas Meta no deja apagar el CBO de una campaña ya creada. Si te pasa: duplicá la campaña (<span class="ui">Duplicar</span> desde el menú de la fila), y en el duplicado dejá el presupuesto Advantage apagado desde el arranque. Armá los tres conjuntos ahí y pausá la original recién cuando la nueva esté gastando. Te queda la vieja intacta por si querés volver atrás.</p>
+  </div>
+
+  <div class="note">
+    <p>Apagar el CBO <b>reinicia la fase de aprendizaje</b> de los conjuntos. Es esperable y es el precio de la corrección: los primeros días van a estar movidos.</p>
+  </div>
+</section>
+
+<section class="phase">
+  <div class="phase-head">
+    <span class="phase-n">Fase 2</span>
+    <h2>Armar los tres conjuntos</h2>
+    <span class="phase-t">25 min</span>
+  </div>
+
+  <div class="col">
+    <p>La idea es una ubicación por conjunto, cada uno con su presupuesto, para que Stories y Feed dejen de perder la subasta interna contra Reels.</p>
+    <p>Atajo: en vez de crear los tres de cero, <strong>duplicá dos veces el conjunto «alquileres - NUEVO»</strong>. Así heredás la geo y las exclusiones de seguidores, que ya están bien configuradas, y solo cambiás lo de abajo.</p>
+  </div>
+
+  <div class="tbl">
+    <table>
+      <thead>
+        <tr><th>Conjunto</th><th>Nombre a poner</th><th>Presupuesto diario</th><th>Única ubicación tildada</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>A</td><td class="mono">SEG / IG Reels</td><td class="n">$3.000</td><td>Instagram · Reels</td></tr>
+        <tr><td>B</td><td class="mono">SEG / IG Stories</td><td class="n">$2.600</td><td>Instagram · Historias</td></tr>
+        <tr><td>C</td><td class="mono">SEG / IG Feed</td><td class="n">$1.900</td><td>Instagram · Feed</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <ol class="steps">
+    <li><input type="checkbox" class="cb"><div>
+      <span class="st-t">Duplicá el conjunto base dos veces</span>
+      <p class="st-d">Sobre <span class="ui">Conjunto de anuncio interacciones / IG y Facebook / alquileres - NUEVO</span>, usá <span class="ui">Duplicar</span>. Vas a terminar con tres, contando el original.</p>
+    </div></li>
+
+    <li><input type="checkbox" class="cb"><div>
+      <span class="st-t">Renombralos según la tabla</span>
+      <p class="st-d">El prefijo <span class="mono">SEG</span> te va a servir después para filtrar rápido en los informes. Los nombres largos actuales no dicen qué ubicación es cada uno.</p>
+    </div></li>
+
+    <li><input type="checkbox" class="cb"><div>
+      <span class="st-t">Cargá el presupuesto diario de cada uno</span>
+      <p class="st-d">$3.000, $2.600 y $1.900. Suman los mismos $7.500 que gastás hoy, así que no estás aumentando la inversión: solo la estás repartiendo distinto.</p>
+    </div></li>
+
+    <li><input type="checkbox" class="cb"><div>
+      <span class="st-t">Pasá las ubicaciones a manuales</span>
+      <p class="st-d">En la sección <span class="ui">Ubicaciones</span>, cambiá de <span class="ui">Ubicaciones Advantage+</span> a <span class="ui">Ubicaciones manuales</span>. Después destildá todo y dejá <strong>una sola</strong> por conjunto, según la tabla.</p>
+      <p class="st-d">Asegurate de que queden destildadas <span class="ui">Facebook</span>, <span class="ui">Messenger</span> y <span class="ui">Audience Network</span> en los tres. Facebook se llevó $53.580 y devolvió 5 seguidores.</p>
+    </div></li>
+
+    <li><input type="checkbox" class="cb"><div>
+      <span class="st-t">Bajá el techo de edad a 54</span>
+      <p class="st-d">Hoy está en 18–65. La franja de 65 o más te cuesta $1.350 por seguidor con 0,71% de conversión: es toque accidental casi puro. Dejalo en <strong>18 a 54</strong>.</p>
+    </div></li>
+
+    <li><input type="checkbox" class="cb"><div>
+      <span class="st-t">Cambiá a audiencia original</span>
+      <p class="st-d">Con <span class="ui">Audiencia Advantage+</span> activada, la edad que ponés es apenas una sugerencia y Meta puede entregar fuera de ese rango. Si querés que el corte en 54 se respete de verdad, buscá el enlace <span class="ui">Cambiar a audiencia original</span> y usá esa.</p>
+      <p class="st-d">Es un cambio con costo: la audiencia original suele encarecer un poco. Si preferís no tocarlo, dejá Advantage+ y aceptá que el límite de edad es orientativo.</p>
+    </div></li>
+
+    <li><input type="checkbox" class="cb"><div>
+      <span class="st-t">Confirmá que las exclusiones siguen puestas</span>
+      <p class="st-d">En <span class="ui">Audiencias personalizadas a excluir</span> tienen que seguir apareciendo <span class="mono">Seguidores de instagram</span> y <span class="mono">Seguidores de facebook</span> en los tres conjuntos. Eso evita que pagues por mostrarle el anuncio a gente que ya te sigue. Al duplicar se heredan, pero verificalo.</p>
+    </div></li>
+
+    <li><input type="checkbox" class="cb"><div>
+      <span class="st-t">Dejá la ubicación geográfica como está</span>
+      <p class="st-d">Lanús + 17 km, personas que viven ahí o estuvieron hace poco. Está bien: el 96,5% de los contactos son del AMBA. No es acá donde está el problema.</p>
+    </div></li>
+  </ol>
+
+  <div class="note ok">
+    <span class="eyebrow">Antes de publicar</span>
+    <p>Repasá que cada conjunto tenga <b>una sola</b> ubicación tildada y su propio presupuesto. Si alguno quedó con dos, Meta va a volver a concentrar el gasto y perdés el sentido del ejercicio.</p>
+  </div>
+</section>
+
+<section class="phase">
+  <div class="phase-head">
+    <span class="phase-n">Fase 3</span>
+    <h2>Los anuncios</h2>
+    <span class="phase-t">15 min + edición</span>
+  </div>
+
+  <div class="col">
+    <p>Acá está la otra mitad del resultado. Los anuncios que traen seguidores baratos son los que la gente termina de ver, y hoy los que se llevan el presupuesto se ven completos apenas el 1,1% de las veces.</p>
+  </div>
+
+  <ol class="steps">
+    <li><input type="checkbox" class="cb"><div>
+      <span class="st-t">Poné tres anuncios en cada conjunto</span>
+      <p class="st-d">Con menos de tres no hay rotación posible y todo el peso cae en una sola pieza, que es exactamente lo que pasó en agosto.</p>
+    </div></li>
+
+    <li><input type="checkbox" class="cb"><div>
+      <span class="st-t">Reactivá Córdoba 920 si la propiedad sigue disponible</span>
+      <p class="st-d">Es el que mejor convierte de toda la campaña: 6,28% de visita a seguidor y $383 por seguidor. Si ya se alquiló, no lo uses — pero mirá el video para copiarle el estilo.</p>
+    </div></li>
+
+    <li><input type="checkbox" class="cb"><div>
+      <span class="st-t">Reemplazá Basavilbaso 1665 1A</span>
+      <p class="st-d">Trajo 394 seguidores, más que ningún otro anuncio, y hoy no hay nada equivalente corriendo. Necesitás una pieza que ocupe ese lugar.</p>
+    </div></li>
+
+    <li><input type="checkbox" class="cb"><div>
+      <span class="st-t">Cambiá qué mostrás en el primer cuadro</span>
+      <p class="st-d">Dejá de abrir con la fachada. Los tres anuncios que revisé son puerta y frente, y el que hoy consume el presupuesto es una puerta de chapa cerrada con dos cajas de gas.</p>
+      <p class="st-d">Abrí con <strong>el mejor ambiente de adentro, con luz natural</strong>, y si se puede con alguien caminando por el espacio. Los que funcionan tienen color, luz y profundidad.</p>
+    </div></li>
+
+    <li><input type="checkbox" class="cb"><div>
+      <span class="st-t">Pausá Blanco Encalada 2396 y Córdoba 2056</span>
+      <p class="st-d">$756 y $874 por seguidor, con 1,29% y 1,06% de conversión. Son los dos que trajeron el problema. Pausalos, no los borres: la historia sirve para comparar.</p>
+    </div></li>
+  </ol>
+</section>
+
+<section class="phase">
+  <div class="phase-head">
+    <span class="phase-n">Fase 4</span>
+    <h2>Apagar lo viejo y medir</h2>
+    <span class="phase-t">10 min</span>
+  </div>
+
+  <ol class="steps">
+    <li><input type="checkbox" class="cb"><div>
+      <span class="st-t">Esperá a que los conjuntos nuevos estén aprobados y gastando</span>
+      <p class="st-d">Recién cuando veas gasto real en los tres, pausá el conjunto viejo <span class="ui">reels - ventas NUEVO</span>. No los apagues antes o te quedás sin nada corriendo.</p>
+    </div></li>
+
+    <li><input type="checkbox" class="cb"><div>
+      <span class="st-t">Agregá la columna de seguidores al informe</span>
+      <p class="st-d">En <span class="ui">Columnas → Personalizar columnas</span>, buscá <span class="ui">Seguidores nuevos en Instagram</span> y agregala junto a <span class="ui">Importe gastado</span>. Es la métrica que la API llama <span class="mono">instagram_profile_follow_v2</span>.</p>
+      <p class="st-d">Guardá esa vista como preajuste. Mientras mires «costo por resultado», vas a estar viendo visitas al perfil y no seguidores — que es justamente lo que ocultó el problema durante dos meses.</p>
+    </div></li>
+
+    <li><input type="checkbox" class="cb"><div>
+      <span class="st-t">Anotá el punto de partida</span>
+      <p class="st-d">Hoy estás en <strong>$762 por seguidor</strong> y unos <strong>89 a 121 seguidores por semana</strong>. Guardá ese número: es contra lo que vas a comparar dentro de dos semanas.</p>
+    </div></li>
+
+    <li><input type="checkbox" class="cb"><div>
+      <span class="st-t">Fijá la regla de corte</span>
+      <p class="st-d">Cualquier anuncio que después de 7 días y $15.000 gastados esté arriba de <strong>$600 por seguidor</strong>, se pausa. Con esa regla, los dos anuncios caros se hubieran cortado solos hace tres semanas.</p>
+    </div></li>
+  </ol>
+
+  <div class="note stop">
+    <span class="eyebrow">Las primeras dos semanas</span>
+    <p><b>No toques nada.</b> Ni presupuestos, ni segmentación, ni anuncios nuevos. Los conjuntos están en aprendizaje y cada cambio lo reinicia. Vas a ver números feos los primeros tres días: es normal.</p>
+    <p>La primera lectura seria es a los 7 días. La decisión de escalar, a los 14.</p>
+  </div>
+</section>
+
+<section class="phase">
+  <div class="phase-head">
+    <span class="phase-n">Después</span>
+    <h2>Qué mirar a los 14 días</h2>
+    <span class="phase-t">—</span>
+  </div>
+
+  <div class="col">
+    <p>Compará el costo por seguidor de cada conjunto contra estos valores, que son los que tenés hoy por ubicación:</p>
+  </div>
+
+  <div class="tbl">
+    <table>
+      <thead>
+        <tr><th>Conjunto</th><th>Referencia actual</th><th>Si sale mejor</th><th>Si sale peor</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>IG Feed</td><td class="n">$176</td><td>Subile presupuesto de a 20%</td><td>Esperá otra semana antes de tocar</td></tr>
+        <tr><td>IG Stories</td><td class="n">$237</td><td>Subile presupuesto de a 20%</td><td>Esperá otra semana antes de tocar</td></tr>
+        <tr><td>IG Reels</td><td class="n">$833</td><td>Dejalo como está</td><td>Bajale presupuesto a favor de los otros dos</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="note warn">
+    <span class="eyebrow">Expectativa realista</span>
+    <p>Los $176 y $237 de Feed y Stories salen de muy poca inversión — $5.468 y $10.172 en treinta días. Al darles diez veces más presupuesto <b>el costo va a subir sí o sí</b>. No los tomes como promesa.</p>
+    <p>Aun duplicándose siguen siendo la mitad de caros que Reels. El escenario conservador es pasar de 425 a unos 600 seguidores por mes; el optimista, cerca de 1.000. Con la misma plata en los dos casos.</p>
+  </div>
+</section>
+
+<footer>
+  <p><strong>De dónde salen los números.</strong> Todos los valores de este runbook vienen del análisis de la cuenta del 27/08/2026: serie semanal de los últimos 90 días, desglose por ubicación y edad de los últimos 30, y detalle de los once anuncios con inversión real. Seguidores medidos con <span class="mono">instagram_profile_follow_v2</span>.</p>
+  <p><strong>Sobre los nombres de los menús.</strong> Meta renombra opciones del Administrador de anuncios seguido. Si alguno no aparece con el nombre exacto que figura acá, buscá el concepto: presupuesto a nivel campaña, ubicaciones manuales, audiencia original, exclusión de audiencias personalizadas.</p>
+  <p>El progreso de los casilleros se guarda solo en este navegador. Si abrís el runbook en otro dispositivo, arranca vacío.</p>
+</footer>
+
+</div>
+
+<script>
+(function(){
+  var KEY = "carames-runbook-v1";
+  var boxes = Array.prototype.slice.call(document.querySelectorAll(".cb"));
+  var bar = document.getElementById("bar");
+  var pct = document.getElementById("pct");
+
+  function load(){
+    try {
+      var raw = localStorage.getItem(KEY);
+      if (!raw) return;
+      var saved = JSON.parse(raw);
+      if (!Array.isArray(saved)) return;
+      boxes.forEach(function(b, i){ b.checked = !!saved[i]; });
+    } catch (e) { /* modo privado, almacenamiento bloqueado: seguimos sin guardar */ }
+  }
+  function save(){
+    try { localStorage.setItem(KEY, JSON.stringify(boxes.map(function(b){ return b.checked; }))); }
+    catch (e) { /* sin persistencia, la página funciona igual */ }
+  }
+  function paint(){
+    var n = boxes.filter(function(b){ return b.checked; }).length;
+    var total = boxes.length;
+    bar.style.width = total ? (n / total * 100) + "%" : "0%";
+    pct.textContent = n + " / " + total;
+    boxes.forEach(function(b){
+      var li = b.closest("li");
+      if (li) li.classList.toggle("done", b.checked);
+    });
+  }
+
+  load();
+  paint();
+  boxes.forEach(function(b){
+    b.addEventListener("change", function(){ save(); paint(); });
+  });
+  document.getElementById("reset").addEventListener("click", function(){
+    boxes.forEach(function(b){ b.checked = false; });
+    save(); paint();
+  });
+})();
+</script>
