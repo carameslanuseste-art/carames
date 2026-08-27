@@ -1,5 +1,12 @@
 # Diagnóstico — Campaña de interacción de Meta Ads
 
+> **Nota (27/08/2026, posterior).** Este informe evalúa la campaña de interacción
+> contra tasaciones y captaciones. Ese no es su objetivo: la campaña está pensada
+> para sumar seguidores. El análisis correcto de esa campaña, medida contra su
+> propio objetivo, está en `meta-interaccion-seguidores.md`. Lo de acá abajo sigue
+> siendo válido para el resto de la cuenta y para el circuito de leads, no como
+> juicio sobre la campaña de interacción.
+
 **Caramés Bienes Raíces, Sucursal Lanús Este** · análisis del 27/08/2026
 Informe visual: https://claude.ai/code/artifact/719365e2-f009-4a72-8599-ffc491b583bd
 
