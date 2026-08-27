@@ -146,10 +146,16 @@ objetivo Interacción lo más cercano es «visitas al perfil», que es lo que ya
 configurado. No se arregla cambiando una opción: hay que acotarle a mano dónde
 puede gastar y medir con el número correcto.
 
-1. **Separar Reels, Stories y Feed en conjuntos distintos.** Hoy hay un conjunto
-   con ubicaciones automáticas y por eso Meta manda el 94% a Reels. Con los
-   costos actuales, un reparto 40/35/25 daría del orden de 1.000 seguidores en
-   lugar de 425 con la misma inversión.
+0. **Apagar el presupuesto automático de campaña (CBO).** El presupuesto está a
+   nivel campaña ($7.500/día) y los conjuntos no tienen presupuesto propio
+   (`daily_budget`, `bid_strategy` y `daily_min_spend_target` vienen vacíos a
+   nivel conjunto). Es Meta quien reparte: en los últimos 30 días le dio
+   **$292.520 a un conjunto y $18.172 al otro**. Si se separan las ubicaciones
+   sin apagar esto primero, Meta vuelve a concentrar todo en Reels y no cambia
+   nada. Este paso es condición del siguiente.
+1. **Separar Reels, Stories y Feed en conjuntos distintos**, con presupuesto
+   propio cada uno. Con los costos actuales, un reparto 40/35/25 daría del orden
+   de 1.000 seguidores en lugar de 425 con la misma inversión.
 2. **Escalar Feed y Stories en escalones.** Sus $176 y $237 salen de $5.468 y
    $10.172 de inversión: al escalar el costo va a subir. Aun duplicándose siguen
    siendo la mitad de caros que Reels (≈600 seguidores en el escenario
