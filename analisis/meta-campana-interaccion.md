@@ -97,8 +97,9 @@ Segmentación geográfica: 96,5% de los leads de agosto son del AMBA
 
 1. **Hoy** — Contactar a los 18 propietarios en «Sin contestar»; empezar por los
    7 que entraron del 25/08 en adelante.
-2. **Esta semana** — Pausar la campaña de interacción ($91.196/semana sin
-   resultado comercial).
+2. ~~Pausar la campaña de interacción.~~ **Corregido:** esa campaña existe para
+   sumar seguidores, no tasaciones, así que no corresponde juzgarla ni pausarla
+   por este informe. Ver `meta-interaccion-seguidores.md`.
 3. **Al reemplazar** — Campaña con objetivo Leads y formulario de vendedor.
    Cambiar el gancho de «encontrá tu vivienda» a «cuánto vale tu propiedad».
 4. **De fondo** — Cambiar el KPI del informe semanal a tasaciones agendadas por
