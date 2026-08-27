@@ -107,13 +107,64 @@ Sumando ambos períodos, Facebook Feed + Facebook Reels consumieron **$53.580**
 y produjeron **5 seguidores** ($10.716 cada uno), con CTR de 10% a 22,68%. Ese
 patrón de clic altísimo con resultado nulo es toque accidental.
 
-## Qué revisar (no ejecutado)
+## Causa 4 — casi la mitad del presupuesto va a la edad más cara
 
-1. Por qué se pausó `Basavilbaso 1665 1A`, y con qué reemplazarlo.
-2. Cambiar el KPI de seguimiento a `instagram_profile_follow_v2` en lugar del
-   «costo por resultado» de Meta.
-3. Evaluar sacar Feed y Stories de la competencia por presupuesto con Reels.
-4. Revisar el primer segundo de los creativos activos (retención).
+Últimos 30 días, por edad:
+
+| Edad | % gasto | CTR | Seguidores | $/seguidor | vis→seg |
+|---|---:|---:|---:|---:|---:|
+| 18–24 | 10,2% | 9,64% | 75 | **$422** | 2,37% |
+| 25–34 | 46,8% | 11,29% | 173 | **$836** | 1,16% |
+| 35–44 | 26,4% | 11,77% | 106 | $770 | 1,29% |
+| 45–54 | 10,7% | 12,89% | 46 | $717 | 1,39% |
+| 55–64 | 4,2% | 14,83% | 20 | $645 | 1,48% |
+| 65+ | 1,7% | 14,60% | 4 | **$1.350** | 0,71% |
+| Total | $309.114 | 11,50% | 424 | $729 | 1,33% |
+
+- Mujeres de 25–34 solas: **34,5% del presupuesto a $913 por seguidor**. Es la
+  línea más grande y de las más caras al mismo tiempo.
+- El CTR sube prolijamente con la edad (9,64% → 14,83%) mientras la conversión a
+  seguidor baja. Misma huella del toque accidental, concentrada en franjas mayores.
+
+## Causa 5 — el creativo
+
+Vista previa en formato Instagram Reels de los tres anuncios que importan:
+
+| Anuncio | Qué muestra | $/seg | ve video 100% | vis→seg |
+|---|---|---:|---:|---:|
+| Córdoba 920 (pausado) | Puerta roja sobre fachada blanca y bordó, sombra de árbol, cielo azul. Color, luz, contraste. | $383 | 3,62% | 6,28% |
+| Basavilbaso 1665 1A (pausado) | Entrada de edificio con macetas, plantas y hall al fondo. Profundidad y verde. | $495 | 1,84% | 4,10% |
+| Blanco Encalada 2396 (activo) | Puerta de chapa perforada cerrada, dos cajas de gas, pared gris, vereda. | $756 | 1,08% | 1,29% |
+
+Los tres son fachada y puerta: **ninguno muestra el interior**. Los que igual
+funcionan son los que tienen color, luz o profundidad.
+
+## Plan recomendado (no ejecutado)
+
+Aclaración previa: **Meta no tiene una optimización por «seguidores»**. Dentro del
+objetivo Interacción lo más cercano es «visitas al perfil», que es lo que ya está
+configurado. No se arregla cambiando una opción: hay que acotarle a mano dónde
+puede gastar y medir con el número correcto.
+
+1. **Separar Reels, Stories y Feed en conjuntos distintos.** Hoy hay un conjunto
+   con ubicaciones automáticas y por eso Meta manda el 94% a Reels. Con los
+   costos actuales, un reparto 40/35/25 daría del orden de 1.000 seguidores en
+   lugar de 425 con la misma inversión.
+2. **Escalar Feed y Stories en escalones.** Sus $176 y $237 salen de $5.468 y
+   $10.172 de inversión: al escalar el costo va a subir. Aun duplicándose siguen
+   siendo la mitad de caros que Reels (≈600 seguidores en el escenario
+   conservador).
+3. **Excluir 65+ y bajarle peso a 25–54.** 65+ cuesta $1.350 con 0,71% de
+   conversión. El bloque 25–54 se lleva el 84% del presupuesto a $797.
+4. **Decidir antes si sirven los seguidores de 18–24.** Son los más baratos
+   ($422). Para venta probablemente no aporten; para alquiler sí — en el reporte
+   del bot de Instagram, 30 de las 36 consultas con operación definida eran
+   alquileres.
+5. **Cambiar el primer cuadro del creativo:** abrir con el mejor ambiente
+   interior y luz natural, no con la fachada.
+6. **Reemplazar `Basavilbaso 1665 1A`** con una pieza del mismo estilo.
+7. **Dejar subir la frecuencia** (cayó de 1,88 a 1,36) achicando radio o audiencia.
+8. **Medir con `instagram_profile_follow_v2`** en el informe de los lunes.
 
 ## Fuentes y salvedades
 
