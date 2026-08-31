@@ -1,0 +1,557 @@
+[
+ {
+  "tipo": "titulo",
+  "runs": [
+   {
+    "t": "BOLETO DE COMPRAVENTA",
+    "b": true
+   }
+  ],
+  "after": 360
+ },
+ {
+  "tipo": "parrafo",
+  "runs": [
+   {
+    "t": "Entre el señor "
+   },
+   {
+    "t": "ROBERTO VICTOR MORENO",
+    "b": true
+   },
+   {
+    "t": ", de nacionalidad argentina, nacido el 25 de Febrero de 1945, C.U.I.T.: (20-06814738-8), con documento nacional de identidad Nro.: 6.814.738, con domicilio en la calle Bolivar N° 855, CABA, en adelante llamado la parte "
+   },
+   {
+    "t": "VENDEDORA",
+    "b": true
+   },
+   {
+    "t": "; y por la otra parte el señor "
+   },
+   {
+    "t": "CHARIF RODRIGO MELAJ",
+    "b": true
+   },
+   {
+    "t": ", de nacionalidad argentina, C.U.I.T.: (20-35600378-1), con documento nacional de identidad Nro.: 35.600.378, con domicilio en la calle Necochea N° 157 – Depto “G”, ciudad y provincia de Mendoza, en adelante llamada la parte "
+   },
+   {
+    "t": "COMPRADORA",
+    "b": true
+   },
+   {
+    "t": ", convienen de buena fe en celebrar el presente boleto de compraventa, sujeto a las cláusulas y condiciones que a continuación se detallan:"
+   }
+  ],
+  "after": 280,
+  "before": 0
+ },
+ {
+  "tipo": "clausula",
+  "runs": [
+   {
+    "t": "PRIMERA – OBJETO: ",
+    "b": true
+   },
+   {
+    "t": "La parte vendedora vende a la parte compradora y esta acepta de conformidad, un inmueble con todo lo edificado, adherido y plantado al suelo situado en la calle Bolivar N° 847/851/853/855, entre las calles Independencia y Estados Unidos, CABA. Edificado en la unidad funcional número 4, ubicada en planta baja y primer piso. El total de la unidad funcional se compone de cuarenta y ocho metros con setenta y ocho decímetros cuadrados. Nomenclatura catastral: Circunscripción 12, Sección: 4, Manzana: 24, Parcela: 33, UF: 4. "
+   },
+   {
+    "t": "------------------------------------------------------------"
+   }
+  ],
+  "after": 200,
+  "before": 0
+ },
+ {
+  "tipo": "clausula",
+  "runs": [
+   {
+    "t": "SEGUNDA – PRECIO Y FORMA DE PAGO: ",
+    "b": true
+   },
+   {
+    "t": "Esta operación se realiza por un precio único total y fijo convenido entre las partes de billetes dólares estadounidenses sesenta mil (U$S 60.000.-), en efectivo, que serán entregados por la parte compradora a la parte vendedora de la siguiente forma: "
+   },
+   {
+    "t": "A) ",
+    "b": true
+   },
+   {
+    "t": "En este acto la parte compradora entrega a la parte vendedora la suma de billetes dólares estadounidenses dieciocho mil (U$S 18.000.-) en efectivo al firmarse el presente instrumento y que recibe la vendedora a su entera satisfacción, como seña a cuenta del precio total y en carácter de principio de ejecución, cantidad por la cual la parte vendedora por medio del presente le otorga suficiente recibo y carta de pago. "
+   },
+   {
+    "t": "B) ",
+    "b": true
+   },
+   {
+    "t": "La parte compradora le entregará a la parte vendedora la suma de billetes dólares estadounidenses cuarenta y dos mil (U$S 42.000.-) en efectivo contra el acto de la firma de la escritura traslativa de dominio. "
+   },
+   {
+    "t": "------------------------------------------------------------"
+   }
+  ],
+  "after": 200,
+  "before": 0
+ },
+ {
+  "tipo": "clausula",
+  "runs": [
+   {
+    "t": "TERCERA – RENUNCIA A LA TEORÍA DE LA IMPREVISIÓN: ",
+    "b": true
+   },
+   {
+    "t": "La parte compradora expresamente renuncia a invocar la teoría de la imprevisión, siendo condición de esta operación que el precio sea abonado íntegramente en la moneda, los periodos, los vencimientos y la forma de pago pactadas, no pudiendo los compradores invocar causal de imprevisión prevista en las disposiciones contempladas en el Código Civil y Comercial, por cuanto manifiestan en este acto que disponen actualmente y dispondrán oportunamente de la totalidad necesaria de dicha divisa pactada en la cláusula segunda, para hacer frente al pago del saldo de precio correspondiente en las condiciones acordadas y evaluando los riesgos de las obligaciones actuales y futuras del presente contrato de compraventa. Por lo tanto, el comprador declara poseer los dólares billetes estadounidenses para abonar dicho saldo de precio y renuncia a la facultad de abonar su equivalente en pesos y que en caso de pérdida, hurto, robo, caso fortuito o fuerza mayor el presente contrato queda resuelto de pleno derecho por ser la moneda de pago únicamente dólares estadounidenses esencial para la firma de la escritura traslativa de dominio. Cualquier pago que no se realice en la especie designada violará lo dispuesto en el artículo 868 del Código Civil y Comercial de la Nación. "
+   },
+   {
+    "t": "------------------------------------------------------------"
+   }
+  ],
+  "after": 200,
+  "before": 0
+ },
+ {
+  "tipo": "clausula",
+  "runs": [
+   {
+    "t": "CUARTA – INFORMES REGISTRALES: ",
+    "b": true
+   },
+   {
+    "t": "Según informes de dominio Nro.: E00716902I2026 e informes de anotaciones personales de inhibición Nro.: E00716902I2026, ambos de fecha 11/08/2026, la parte vendedora no se halla inhibida, ni existen cesiones para disponer de sus bienes, constando el dominio a nombre de los causantes, sin embargos, hipotecas, gravámenes de cualquier orden, ni trabas en el dominio. "
+   },
+   {
+    "t": "------------------------------------------------------------"
+   }
+  ],
+  "after": 200,
+  "before": 0
+ },
+ {
+  "tipo": "clausula",
+  "runs": [
+   {
+    "t": "QUINTA – ESCRITURACIÓN. LUGAR DE OTORGAMIENTO: ",
+    "b": true
+   },
+   {
+    "t": "La escritura traslativa de dominio del objeto de la venta de este contrato a favor de la parte compradora se firmará dentro de los treinta (30) días posteriores a la suscripción del presente instrumento, y se otorgará "
+   },
+   {
+    "t": "indefectiblemente en la CIUDAD AUTÓNOMA DE BUENOS AIRES",
+    "b": true,
+    "u": true
+   },
+   {
+    "t": ", ante la notaría María de las Mercedes Suasnávar, con oficina en Nogoyá 3150, 1 “D”, CABA, o ante el escribano que las partes designen de común acuerdo, quien en todo caso deberá tener registro en la Ciudad Autónoma de Buenos Aires y otorgar el acto dentro de dicha jurisdicción. Las partes acuerdan expresamente que el acto de escrituración "
+   },
+   {
+    "t": "no podrá ser trasladado a extraña jurisdicción",
+    "b": true
+   },
+   {
+    "t": ", salvo conformidad expresa y por escrito de ambas partes. Se pacta que la totalidad de los gastos de la escritura (factura comprador y factura vendedor), estudio de título, certificados, honorarios correspondientes y el impuesto de sellos será soportado a exclusivo cargo por la parte compradora. El plazo de treinta (30) días previsto en esta cláusula quedará suspendido mientras se encuentre pendiente el plazo de subsanación establecido en la cláusula SEXTA. "
+   },
+   {
+    "t": "------------------------------------------------------------"
+   }
+  ],
+  "after": 200,
+  "before": 0
+ },
+ {
+  "tipo": "clausula",
+  "runs": [
+   {
+    "t": "SEXTA – TÍTULOS PERFECTOS. ESTUDIO DE TÍTULOS. RESTITUCIÓN DEL DINERO ENTREGADO: ",
+    "b": true
+   },
+   {
+    "t": "La presente compraventa se realiza, de manera expresa y como "
+   },
+   {
+    "t": "condición esencial y determinante",
+    "b": true,
+    "u": true
+   },
+   {
+    "t": " del consentimiento prestado por la parte compradora, "
+   },
+   {
+    "t": "SOBRE LA BASE DE TÍTULOS PERFECTOS",
+    "b": true,
+    "u": true
+   },
+   {
+    "t": ". La parte vendedora declara y garantiza que el título del inmueble es perfecto y de buena fuente; que el dominio se encuentra libre de gravámenes, hipotecas, embargos, inhibiciones, medidas cautelares, usufructos, servidumbres, ocupantes, poseedores, intrusos y deudas de cualquier índole; que no reconoce por origen prescripción adquisitiva —treintañal ni veinteñal— obtenida por información sumaria, ni dación en pago; y que no existen acciones, juicios, reclamos ni derechos de terceros que puedan afectar la transmisión del dominio en las condiciones aquí pactadas. "
+   },
+   {
+    "t": "------------------------------------------------------------"
+   }
+  ],
+  "after": 160,
+  "before": 0
+ },
+ {
+  "tipo": "continuacion",
+  "runs": [
+   {
+    "t": "El estudio de títulos será practicado por la escribanía interviniente con carácter previo a la escrituración. Si de dicho estudio resultare alguna observación, objeción, defecto u obstáculo que impida o comprometa la transmisión del dominio con títulos perfectos, la parte vendedora deberá subsanarlo íntegramente, a su exclusivo cargo y costo, dentro del "
+   },
+   {
+    "t": "plazo ordinario de TRES (3) MESES",
+    "b": true,
+    "u": true
+   },
+   {
+    "t": " contados desde la fecha en que le fuere notificada la observación."
+   }
+  ],
+  "after": 160,
+  "before": 0
+ },
+ {
+  "tipo": "continuacion",
+  "runs": [
+   {
+    "t": "Si la observación resultare insubsanable, o no fuere efectivamente subsanada dentro del referido plazo de tres (3) meses, la parte compradora podrá dejar sin efecto el presente boleto de pleno derecho y sin responsabilidad alguna de su parte, bastando a tal fin la "
+   },
+   {
+    "t": "notificación cursada por correo electrónico",
+    "b": true,
+    "u": true
+   },
+   {
+    "t": " a la casilla de la parte vendedora constituida en la cláusula DÉCIMO SEGUNDA, la que se tendrá por válida, eficaz y fehaciente a todos los efectos."
+   }
+  ],
+  "after": 160,
+  "before": 0
+ },
+ {
+  "tipo": "continuacion",
+  "runs": [
+   {
+    "t": "Producida dicha notificación, la parte vendedora deberá "
+   },
+   {
+    "t": "REINTEGRAR",
+    "b": true,
+    "u": true
+   },
+   {
+    "t": " a la parte compradora, o a quien ésta designare por escrito, la totalidad del dinero entregado en virtud del presente instrumento —esto es, la suma de dólares estadounidenses billete "
+   },
+   {
+    "t": "DIECIOCHO MIL (U$S 18.000.-)",
+    "b": true
+   },
+   {
+    "t": " recibida en concepto de seña conforme la cláusula SEGUNDA, apartado A), con más cualquier otro importe que hubiere percibido a cuenta de precio—, en la misma especie y calidad de moneda recibida, "
+   },
+   {
+    "t": "dentro de las VEINTICUATRO (24) HORAS de cursada la notificación",
+    "b": true,
+    "u": true
+   },
+   {
+    "t": "."
+   }
+  ],
+  "after": 160,
+  "before": 0
+ },
+ {
+  "tipo": "continuacion",
+  "runs": [
+   {
+    "t": "El reintegro previsto en la presente cláusula constituye la única y exclusiva consecuencia derivada de la existencia de observaciones al título, quedando expresamente excluida toda otra reclamación, indemnización, daño, perjuicio, lucro cesante o penalidad, así como la devolución de la seña doblada, renunciando la parte compradora a invocar a tal fin el artículo 1059 del Código Civil y Comercial de la Nación y a reclamar suma alguna distinta de la aquí prevista. "
+   },
+   {
+    "t": "------------------------------------------------------------"
+   }
+  ],
+  "after": 200,
+  "before": 0
+ },
+ {
+  "tipo": "clausula",
+  "runs": [
+   {
+    "t": "SÉPTIMA – DOCUMENTACIÓN: ",
+    "b": true
+   },
+   {
+    "t": "La parte vendedora se compromete a entregar a la escribanía interviniente toda la documentación pertinente y necesaria, como así también los expedientes sucesorios, para facilitar todos los trámites inherentes a la escrituración, solucionando cualquier problema que entorpezca la misma por inconvenientes que surjan en los antecedentes, siendo estos de su exclusiva responsabilidad. "
+   },
+   {
+    "t": "------------------------------------------------------------"
+   }
+  ],
+  "after": 200,
+  "before": 0
+ },
+ {
+  "tipo": "clausula",
+  "runs": [
+   {
+    "t": "OCTAVA – POSESIÓN Y ESTADO DEL INMUEBLE: ",
+    "b": true
+   },
+   {
+    "t": "La parte compradora tomará efectiva posesión a la firma de la escritura traslativa de dominio y se entregará el inmueble en el estado en que se encuentra, previo inventario tácito, habiéndolo visitado con antelación al presente, "
+   },
+   {
+    "t": "con títulos perfectos y sin vicio alguno",
+    "b": true,
+    "u": true
+   },
+   {
+    "t": ", conforme lo declarado y garantizado en la cláusula SEXTA, no reconociendo su origen prescripción treintañal o veinteñal obtenida por información sumaria ni dación en pago, libre de gravámenes, hipotecas, embargos, inhibiciones y/o deudas de cualquier índole, con todos sus impuestos, tasas, contribuciones, expensas y servicios pagos al día de la efectiva posesión (de existir deudas serán tomadas a cargo de la parte vendedora). Todos los impuestos, tasas, contribuciones, expensas y servicios que recaigan sobre el inmueble en el lapso comprendido entre el presente instrumento y la escritura traslativa de dominio serán exclusivamente a cargo y costo de la parte vendedora. "
+   },
+   {
+    "t": "------------------------------------------------------------"
+   }
+  ],
+  "after": 200,
+  "before": 0
+ },
+ {
+  "tipo": "clausula",
+  "runs": [
+   {
+    "t": "NOVENA – MORA: ",
+    "b": true
+   },
+   {
+    "t": "La mora de cualquiera de las partes en el cumplimiento de las obligaciones que por este contrato son a su cargo se producirá de pleno derecho y en forma automática por el mero vencimiento de los plazos, sin necesidad de intimaciones previas de orden judicial o extrajudicial, sin perjuicio de lo estatuido en el Código Civil y Comercial de la Nación. Las partes se ajustan formalmente al pacto comisorio implícito en el presente instrumento según el Código Civil y Comercial de la Nación Argentina. "
+   },
+   {
+    "t": "------------------------------------------------------------"
+   }
+  ],
+  "after": 160,
+  "before": 0
+ },
+ {
+  "tipo": "continuacion",
+  "runs": [
+   {
+    "t": "En todos los casos de mora el saldo de precio devengará punitorios del uno por mil (1‰) diarios, incrementándose al dinero adeudado. "
+   },
+   {
+    "t": "------------------------------------------------------------"
+   }
+  ],
+  "after": 200,
+  "before": 0
+ },
+ {
+  "tipo": "clausula",
+  "runs": [
+   {
+    "t": "DÉCIMA – FALLECIMIENTO O INCAPACIDAD: ",
+    "b": true
+   },
+   {
+    "t": "En caso de fallecimiento, incapacidad o inhabilitación legalmente declaradas de los contratantes, sus herederos —unificando representación en el primer caso— y su representante legal en los restantes deberán tomar a su cargo y asumir las obligaciones contraídas dentro de los ciento ochenta (180) días de ocurrido el fallecimiento o declarada la incapacidad o inhabilitación, so pena de incurrir en mora, con iguales consecuencias y penalidades que las estipuladas para el caso de incumplimiento establecidas en la cláusula precedente. "
+   },
+   {
+    "t": "------------------------------------------------------------"
+   }
+  ],
+  "after": 200,
+  "before": 0
+ },
+ {
+  "tipo": "clausula",
+  "runs": [
+   {
+    "t": "DÉCIMO PRIMERA – ASENTIMIENTO CONYUGAL: ",
+    "b": true
+   },
+   {
+    "t": "Sin perjuicio de que el inmueble objeto del presente reviste el carácter de "
+   },
+   {
+    "t": "bien propio",
+    "b": true
+   },
+   {
+    "t": " de la parte vendedora, por haberlo adquirido encontrándose divorciada, y de no constituir sede del hogar conyugal ni vivienda familiar, las partes acuerdan expresamente que al acto de otorgamiento de la escritura traslativa de dominio "
+   },
+   {
+    "t": "comparecerá el/la cónyuge de la parte vendedora",
+    "b": true,
+    "u": true
+   },
+   {
+    "t": ", "
+   },
+   {
+    "t": "[COMPLETAR: nombre completo y DNI del/de la cónyuge]",
+    "b": true,
+    "fill": true
+   },
+   {
+    "t": ", a fin de prestar su "
+   },
+   {
+    "t": "ASENTIMIENTO CONYUGAL AD CAUTELAM",
+    "b": true,
+    "u": true
+   },
+   {
+    "t": " en los términos de los artículos 456, 457 y 470 del Código Civil y Comercial de la Nación, en cuanto pudiere corresponder, manifestando su expresa conformidad con la venta, con el precio pactado y con las condiciones del presente, a fin de precaver todo cuestionamiento ulterior del acto y los eventuales efectos legales que pudieran derivarse de la disolución de la sociedad conyugal. "
+   },
+   {
+    "t": "------------------------------------------------------------"
+   }
+  ],
+  "after": 160,
+  "before": 0
+ },
+ {
+  "tipo": "continuacion",
+  "runs": [
+   {
+    "t": "La obtención y comparecencia de dicho asentimiento será a exclusivo cargo, costo y responsabilidad de la parte vendedora, y constituye condición para el otorgamiento de la escritura traslativa de dominio. "
+   },
+   {
+    "t": "------------------------------------------------------------"
+   }
+  ],
+  "after": 200,
+  "before": 0
+ },
+ {
+  "tipo": "clausula",
+  "runs": [
+   {
+    "t": "DÉCIMO SEGUNDA – DOMICILIOS, NOTIFICACIONES Y JURISDICCIÓN: ",
+    "b": true
+   },
+   {
+    "t": "Los firmantes constituyen domicilios especiales en los lugares denunciados al comienzo del presente, donde tendrán validez todas las notificaciones que se practiquen. Asimismo, a los efectos previstos en la cláusula SEXTA y para toda otra comunicación entre las partes, constituyen los siguientes "
+   },
+   {
+    "t": "domicilios electrónicos",
+    "b": true,
+    "u": true
+   },
+   {
+    "t": ", en los que se tendrán por válidas, eficaces y fehacientes todas las notificaciones que allí se cursen: "
+   },
+   {
+    "t": "------------------------------------------------------------"
+   }
+  ],
+  "after": 120,
+  "before": 0
+ },
+ {
+  "tipo": "continuacion",
+  "runs": [
+   {
+    "t": "Parte VENDEDORA: ",
+    "b": true
+   },
+   {
+    "t": "[COMPLETAR: correo electrónico de ROBERTO VICTOR MORENO]",
+    "b": true,
+    "fill": true
+   }
+  ],
+  "after": 100,
+  "before": 0
+ },
+ {
+  "tipo": "continuacion",
+  "runs": [
+   {
+    "t": "Parte COMPRADORA: ",
+    "b": true
+   },
+   {
+    "t": "[COMPLETAR: correo electrónico de CHARIF RODRIGO MELAJ]",
+    "b": true,
+    "fill": true
+   }
+  ],
+  "after": 160,
+  "before": 0
+ },
+ {
+  "tipo": "continuacion",
+  "runs": [
+   {
+    "t": "Todo cambio de domicilio —real, especial o electrónico— sólo será oponible a la otra parte a partir de su notificación fehaciente."
+   }
+  ],
+  "after": 160,
+  "before": 0
+ },
+ {
+  "tipo": "continuacion",
+  "runs": [
+   {
+    "t": "Para todo diferendo, controversia, interpretación o ejecución derivada del presente, las partes se someten expresamente a la "
+   },
+   {
+    "t": "JURISDICCIÓN DE LOS TRIBUNALES NACIONALES ORDINARIOS EN LO CIVIL DE LA CIUDAD AUTÓNOMA DE BUENOS AIRES",
+    "b": true,
+    "u": true
+   },
+   {
+    "t": ", con expresa renuncia a todo otro fuero o jurisdicción que pudiere corresponderles, incluido el fuero federal y los tribunales de la Provincia de Buenos Aires. "
+   },
+   {
+    "t": "------------------------------------------------------------"
+   }
+  ],
+  "after": 200,
+  "before": 0
+ },
+ {
+  "tipo": "parrafo",
+  "runs": [
+   {
+    "t": "En prueba de conformidad, previa lectura y ratificación de las partes, se suscriben tres (03) ejemplares de un mismo tenor y a un solo efecto en "
+   },
+   {
+    "t": "[COMPLETAR: lugar de firma]",
+    "b": true,
+    "fill": true
+   },
+   {
+    "t": ", el día treinta y un (31) del mes de agosto del año dos mil veintiséis (2026)."
+   }
+  ],
+  "after": 800,
+  "before": 360
+ },
+ {
+  "tipo": "parrafo",
+  "runs": [
+   {
+    "t": "ROBERTO VICTOR MORENO: …………………………………………………………"
+   }
+  ],
+  "after": 700,
+  "before": 0,
+  "alignment": "left"
+ },
+ {
+  "tipo": "parrafo",
+  "runs": [
+   {
+    "t": "CHARIF RODRIGO MELAJ: ………………………………………………………………"
+   }
+  ],
+  "after": 0,
+  "before": 0,
+  "alignment": "left"
+ }
+]
