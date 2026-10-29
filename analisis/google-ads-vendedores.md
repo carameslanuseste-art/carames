@@ -309,3 +309,103 @@ presupuesto o abrir Lomas y Avellaneda con páginas propias.
   recreado el 19/10 y editado el 22/10, anuncios editados el 8/10).
 - Los montos están en pesos argentinos; las conversiones fraccionarias son por atribución basada
   en datos.
+
+---
+
+## Registro de cambios aplicados el 29/10/2026
+
+Aplicados vía la API de Google Ads (módulo «Google Ads Campaign Management» de Make, conexión
+«Caramés - Google Ads (lectura)», que en realidad tiene permiso de escritura). Todo es reversible
+desde la cuenta.
+
+### Estructura nueva
+
+| Campaña | ID | Presupuesto | Ubicación | Grupos |
+|---|---|---:|---|---|
+| Caramés - Vendedores - Lanús | 24417907615 | $28.000/día | Partido de Lanús (presencia) | Vendedores - Lanús (40 palabras, 2 anuncios), Sucesiones y herencias (10 palabras, 1 anuncio) |
+| Caramés - Vendedores - Lomas de Zamora | 24412071329 | $10.000/día | Lomas de Zamora (presencia) | Vendedores - Lomas de Zamora (28 palabras, 1 anuncio) |
+| Caramés - Vendedores - Avellaneda | 24412071332 | $7.000/día | Avellaneda (presencia) | Vendedores - Avellaneda (28 palabras, 1 anuncio) |
+| Caramés - Tasaciones / Vendedores (AI Max, pausada 29/10) | 23969840286 | $28.000/día | — | **Pausada.** La API no permite apagar AI Max en una campaña que ya lo tiene activado, así que se reemplazó por la campaña nueva de Lanús. Se puede reactivar si hiciera falta. |
+
+Las tres campañas nuevas: solo Red de Búsqueda (sin socios ni Display), AI Max apagado, idioma
+español, escritorio con ajuste de puja −40 %, estrategia de cartera «Caramés - CPA 30k» compartida
+(CPA objetivo $35.000, **tope de CPC subido de $1.500 a $3.000**). Presupuesto total igual al
+anterior: $45.000/día.
+
+### Palabras clave
+
+- Todas en concordancia de frase. Base común de 18 palabras de vendedor («quiero vender mi casa»,
+  «tasar propiedad», «tasación de propiedades», «poner en venta mi casa», «cuánto vale mi casa»…)
+  más 10 con zona por campaña («vender casa banfield», «tasación avellaneda», «tasación lanús
+  oeste»…) y un grupo «Sucesiones y herencias» en Lanús.
+- En la campaña vieja se pausaron antes de pausarla: «quiero vender mi piso», «valuación de
+  propiedades», «calcular precio vivienda online gratis», «cuanto cuesta mi casa», «vender casa»,
+  «quiero vender mi departamento», «tasación gratis», «tasar casa online», «simulador tasación
+  gratuita», «cuanto vale mi piso», «tasacion online gratuita», «tasación vivienda online gratis»,
+  «…con referencia catastral», «tasador de viviendas», «inmobiliaria Lanús vender».
+
+### Negativas
+
+Lista compartida nueva **«Negativas - Vendedores (frase)»** (id 12294147640, 137 términos en
+frase) vinculada a las tres campañas, junto con la lista existente «Negativas - Competencia y
+fuera de zona». Bloquea: inmobiliaria(s), bienes raíces, catastro/catastral/arba/dominio/
+titularidad/nomenclatura, valuación fiscal, impuesto, abl, gastos de escritura, online, simulador,
+calculadora, piso(s), casas/casa/departamento(s)/ph/terreno(s) en venta, venta de casas/
+departamentos/terrenos, dueño directo, comprar/compro/compra, alquiler(es)/alquilar/alquilo,
+hipoteca/hipotecario/hipotecar, crédito, cuotas, curso, trabajo, empleo, sueldo, carrera,
+martillero, portales (zonaprop, argenprop, mercadolibre, properati, idealista, mitula), franquicias
+(remax, century) y ~60 nombres de inmobiliarias de la zona vistos en los términos de búsqueda.
+
+### Anuncios
+
+- Lanús: dos anuncios adaptables con los textos de los anteriores, sin «Tasación online gratuita»,
+  sin «Tasar departamento / piso», sin «Tasador de propiedades»; con «Tasación gratis en Lanús»,
+  «Tasá tu casa en Lanús», «Asesores que conocen Lanús», «Vendé rápido» corregido y una
+  descripción que nombra Lanús Este y Oeste, Gerli, Escalada y Alsina.
+- Lomas de Zamora: «Tasación gratis en Lomas», «Vendé tu casa en Banfield», «Tasamos en
+  Temperley», «Asesores en Lomas de Zamora» + descripción propia.
+- Avellaneda: «Tasación gratis en Avellaneda», «Vendé tu casa en Avellaneda», «Tasamos en Sarandí
+  y Wilde», «Asesores en Avellaneda» + descripción propia.
+- Sucesiones: «Tasación para sucesión», «Vendé una casa heredada», «Tasación judicial y
+  sucesoria», «Te orientamos en los pasos».
+- URL final unificada en `https://caramespropiedades.com.ar/tasacion/` con rutas visibles
+  `/tasacion/lanus`, `/tasacion/lomas-zamora`, `/tasacion/avellaneda`, `/tasacion/sucesion`.
+- Los anuncios de Lanús quedaron «en revisión» al cierre; los de Lomas y Avellaneda ya aprobados.
+
+### Extensiones
+
+Vinculadas a las tres campañas: formulario de Google «Tasá con nosotros», sitelinks «Quiero
+vender», «Sobre Caramés», «Tasá tu propiedad gratis», «Formulario en 30 segundos», 9 textos
+destacados, extensión de llamada, 4 imágenes y 2 fragmentos estructurados. Nuevos sitelinks
+«Tasá en Lomas de Zamora» (Lomas) y «Tasá en Avellaneda» (Avellaneda); «Tasá en Lanús Este/Oeste»
+en Lanús.
+
+### Conversiones
+
+- «Clic WhatsApp» pasó a **secundaria** (ya no entra en el CPA objetivo).
+- Creada la acción **«Tasación agendada (offline)»** (id 7882251010, categoría cliente potencial
+  calificado, importación por GCLID, ventana 90 días, primaria). La alimenta el escenario de Make
+  descripto abajo.
+
+### Recomendaciones de Google
+
+Descartadas: Performance Max, socios de búsqueda y expansión a Display.
+
+### Make
+
+- `Carames - Tasacion Web -> Planilla` (id 5480977) estaba **desactivado desde fines de agosto**:
+  por eso ningún lead del formulario web entró a la planilla en octubre. Hay que activarlo a mano
+  (el asistente no tiene permiso para activar escenarios).
+- Escenario nuevo «Caramés - Tasaciones agendadas -> Google Ads (conversión offline)»: una vez por
+  día cruza los leads de «Leads Google» que tienen GCLID y no tienen «Se concretó» con la agenda de
+  tasaciones (`_Mirror`) por los últimos 8 dígitos del teléfono; si hay tasación, sube la conversión
+  a «Tasación agendada (offline)» con la fecha de la visita y marca la fila. Se crea desactivado:
+  activarlo a mano.
+- El escenario temporal «TEMP Claude - Analisis Google Ads (borrar)» (id 6402180) quedó como
+  herramienta de consulta/escritura a la API; se puede borrar.
+
+### Pendientes que no se pueden hacer desde acá
+
+- Páginas de destino por zona en la web y mejora de la página `/tasacion` en móvil.
+- Seguimiento humano: 29 leads desde el 2/09 sin fecha de contacto.
+- Cambiar el KPI del informe semanal a tasaciones agendadas por canal (escenario 5922617).
