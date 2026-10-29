@@ -189,7 +189,7 @@ body.push(table(null, [
   ["Prioridad 2 (semana 2)", "A3 (reel vendedores), Bloque C · reemplazos de PH y carrusel apto crédito"],
   ["Prioridad 3 (semana 3)", "Bloque D · reel educativo de retargeting, Bloque E · reels de alquiler"],
   ["Entrega", "Carpeta de Drive «META · Creativos · 2026-11», un subcarpeta por bloque, nombres según la convención de la sección 1"],
-  ["Aprueba", "Gonzalo revisa texto y precios antes de subir a Ads Manager; nada sale sin precio y dato de mercado verificados"]
+  ["Aprueba", "Gonzalo revisa texto y precios antes de subir a Ads Manager. Los valores de m² ya están cargados (octubre 2026)"]
 ], [2600, 6426]));
 body.push(gap(220));
 
@@ -249,7 +249,7 @@ body.push(...h2("Nombres de archivo y entrega"));
 body.push(p([run("Convención: "), mono("BLOQUE_pieza_formato_vNN.ext"), run(". Ejemplos: "), mono("A_A1a-casa_9x16_v01.jpg"), run(", "), mono("B_pichincha-3020_9x16_v01.jpg"), run(", "), mono("C_carrusel-apto-credito_1x1_tarjeta03_v01.jpg"), run(".")]));
 body.push(bullet("JPG calidad 90 para imágenes, MP4 para video. No PNG (pesa el triple y no cambia nada)."));
 body.push(bullet("Junto con cada pieza, un archivo de texto con el copy del anuncio (texto principal, titular, descripción) tal como está en este brief, para que quien carga en Ads Manager copie y pegue."));
-body.push(bullet("Las piezas con dato de mercado (A1, A2, A3) se entregan con el número tomado de la planilla «VALORES_REFERENCIA_ZONAS» (Drive, carpeta 11 Tasaciones/_SISTEMA), fila Lanús Este, mes vigente. Anotar en el nombre del archivo el mes del dato. Si el mes cambia, se rehace la pieza."));
+body.push(bullet("Las piezas con dato de mercado (A1, A2, A3) llevan los valores de octubre 2026 ya indicados en cada ficha (departamentos USD 1.711/m²; PH USD 725 y casas USD 671/m² sobre superficie total). Anotar en el nombre del archivo el mes del dato. Si el mes cambia, pedir el valor nuevo y rehacer la pieza."));
 
 // ---------------- BLOQUE A ----------------
 body.push(new Paragraph({ children: [new PageBreak()] }));
@@ -269,12 +269,12 @@ body.push(...pieza("A1", "Imagen estática · «¿Cuánto vale tu propiedad en L
   ["Composición 9:16", [
     "Foto a sangre en los 1920 px, con degradado oscuro del 0% al 60% desde la mitad hacia abajo.",
     "Entre los 300 y 520 px de alto, titular en blanco, 2 líneas, 84 px: «¿Cuánto vale tu propiedad en Lanús Este?»",
-    "Entre los 900 y 1150 px, el dato grande, 120 px, blanco con un tono de marca: «USD [___] por m²» y debajo, 40 px: «Promedio de publicación · Lanús Este · [mes] 2026».",
+    "Entre los 900 y 1150 px, el dato grande, 120 px, blanco con un tono de marca: «USD 1.711 por m²» en A1-b (departamentos) y «USD 725 por m²» en A1-a (PH; para casa, USD 671). Debajo, 40 px: «Promedio de publicación · Lanús Este · octubre 2026» (en A1-a agregar «sobre superficie total»).",
     "Entre los 1200 y 1360 px, franja sólida de color de marca con texto blanco 56 px: «Tasación sin cargo en 48 hs».",
     "Entre los 1400 y 1520 px, en 32 px gris claro: «Diego G. Caramés · Martillero y Corredor Público · Col. 216 CPMCAL». Logo abajo a la derecha dentro del área segura."
   ]],
   ["Composición 1:1 y 4:5", "Misma jerarquía, foto ocupa los dos tercios superiores, franja sólida inferior con el dato de m² a la izquierda y «Tasación sin cargo en 48 hs» a la derecha. Logo abajo a la derecha."],
-  ["Dato de mercado", "Tomar de «VALORES_REFERENCIA_ZONAS», fila Lanús Este: «Depto USD/m²» para A1-b, «Casa/PH USD/m²» para A1-a. Nunca inventarlo ni redondearlo hacia arriba. Agregar siempre «promedio de publicación» para que no se lea como tasación."],
+  ["Dato de mercado", "Valores de octubre 2026 (planilla VALORES_REFERENCIA_ZONAS, fila Lanús Este, mediana de avisos de Zonaprop): departamentos USD 1.711/m²; PH USD 725/m² y casas USD 671/m², ambos sobre superficie total (por eso son más bajos que el de departamentos). Nunca redondearlos hacia arriba. Agregar siempre «promedio de publicación» para que no se lea como tasación. Se recalculan cada mes: si la pieza sale en diciembre, pedir el valor nuevo."],
   ["Texto principal del anuncio", "¿Tenés una propiedad en Lanús Este y querés saber cuánto vale hoy? Te hacemos la tasación sin cargo y sin compromiso: visitamos, comparamos con lo que se está vendiendo en tu cuadra y en 48 hs tenés el informe firmado por un martillero colegiado. Escribinos por WhatsApp y coordinamos."],
   ["Titular", "Tasación sin cargo en 48 hs"],
   ["Descripción", "Caramés Bienes Raíces · Lanús Este"],
@@ -286,12 +286,12 @@ body.push(...pieza("A2", "Carrusel · «Lo que vale tu propiedad, en 5 tarjetas�
   "5 tarjetas 1:1 (1080 × 1080) · prioridad 1 · entrega: viernes de esta semana", [
   ["Objetivo", "Darle al propietario los datos que busca antes de escribir: cuánto vale, cómo es el proceso, quién lo hace. Va en el mismo conjunto que A1 para que Meta elija."],
   ["Tarjeta 1 · Gancho", "Fondo sólido de color de marca. Texto blanco 96 px, centrado, 3 líneas: «¿Cuánto vale tu propiedad hoy?». Abajo en 36 px: «Deslizá →». Logo arriba a la izquierda."],
-  ["Tarjeta 2 · Dato departamentos", "Foto de edificio o living de Lanús Este con franja inferior. Texto: «Departamentos en Lanús Este» (48 px) · «USD [___]/m²» (120 px) · «promedio de publicación · [mes] 2026» (32 px)."],
-  ["Tarjeta 3 · Dato casas y PH", "Misma estructura con fachada de casa. Texto: «Casas y PH en Lanús Este» · «USD [___]/m²» · «sobre superficie total · [mes] 2026»."],
+  ["Tarjeta 2 · Dato departamentos", "Foto de edificio o living de Lanús Este con franja inferior. Texto: «Departamentos en Lanús Este» (48 px) · «USD 1.711/m²» (120 px) · «promedio de publicación · octubre 2026» (32 px)."],
+  ["Tarjeta 3 · Dato casas y PH", "Misma estructura con fachada de casa. Texto: «Casas y PH en Lanús Este» · «PH USD 725/m² · Casas USD 671/m²» · «sobre superficie total · promedio de publicación · octubre 2026»."],
   ["Tarjeta 4 · Cómo funciona", "Fondo claro, tres pasos en columna con número grande a la izquierda: «1 · Nos escribís por WhatsApp» / «2 · Visitamos tu propiedad (30 minutos)» / «3 · En 48 hs recibís el informe firmado». Debajo: «Sin cargo. Sin compromiso.»"],
   ["Tarjeta 5 · Confianza + CTA", "Collage de 3 fotos de propiedades vendidas por Caramés con el sello «VENDIDA» en diagonal y el barrio debajo (sin precios). Franja inferior: «Diego G. Caramés · Martillero Col. 216 CPMCAL» y «Escribinos por WhatsApp». Logo."],
   ["Texto principal del anuncio", "Antes de decidir, conocé el valor real de tu propiedad. Estos son los valores promedio de publicación en Lanús Este este mes. Si querés saber cuánto vale la tuya, te hacemos la tasación sin cargo en 48 hs."],
-  ["Titulares por tarjeta", ["T1: ¿Cuánto vale tu propiedad?", "T2: Departamentos · USD [___]/m²", "T3: Casas y PH · USD [___]/m²", "T4: Así trabajamos", "T5: Tasación sin cargo"]],
+  ["Titulares por tarjeta", ["T1: ¿Cuánto vale tu propiedad?", "T2: Departamentos · USD 1.711/m²", "T3: Casas y PH · USD 725 y 671/m²", "T4: Así trabajamos", "T5: Tasación sin cargo"]],
   ["Botón", "Enviar mensaje de WhatsApp (en las 5 tarjetas)"],
   ["Qué evitar", "No mezclar tipografías entre tarjetas. No usar más de dos colores de marca. No poner el precio de cierre de las propiedades vendidas."]
 ]));
@@ -299,7 +299,7 @@ body.push(...pieza("A2", "Carrusel · «Lo que vale tu propiedad, en 5 tarjetas�
 body.push(...pieza("A3", "Reel 15 s · «Lo que vale tu casa en Lanús Este»",
   "1 video 9:16, 15 segundos, con subtítulos · prioridad 2 · entrega: semana 2", [
   ["Objetivo", "Mismo mensaje que A1 en video para Reels. Reemplaza al reel «¿Querés vender?» que no funcionó."],
-  ["Segundos 0 a 2", "Pantalla con el número grande (USD [___]/m²) y voz o texto: «Esto vale hoy el metro en Lanús Este». Sin logo, sin intro. Si en 2 segundos no hay número, se van."],
+  ["Segundos 0 a 2", "Pantalla con el número grande (USD 1.711/m², departamentos) y voz o texto: «Esto vale hoy el metro en Lanús Este». Sin logo, sin intro. Si en 2 segundos no hay número, se van."],
   ["Segundos 2 a 6", "Tres fachadas de propiedades vendidas por Caramés, 1,3 s cada una, con «VENDIDA · [barrio]» en texto 64 px. Movimiento suave de zoom."],
   ["Segundos 6 a 11", "Diego a cámara (o voz en off sobre plano de una visita de tasación): «Si tenés una propiedad en Lanús, te decimos cuánto vale. Sin cargo, sin compromiso, en 48 horas.»"],
   ["Segundos 11 a 15", "Pantalla final: «Tasación sin cargo en 48 hs» (84 px) · «Escribinos por WhatsApp» (48 px) · «Diego G. Caramés · Martillero Col. 216» (32 px) · logo. Mantener 4 segundos completos."],
