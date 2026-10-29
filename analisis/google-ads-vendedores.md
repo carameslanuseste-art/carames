@@ -409,3 +409,18 @@ Descartadas: Performance Max, socios de búsqueda y expansión a Display.
 - Páginas de destino por zona en la web y mejora de la página `/tasacion` en móvil.
 - Seguimiento humano: 29 leads desde el 2/09 sin fecha de contacto.
 - Cambiar el KPI del informe semanal a tasaciones agendadas por canal (escenario 5922617).
+
+### Actualización 29/10, 20:15 (después de activar los escenarios)
+
+- El escenario de conversión offline (id 6831504) quedó corregido y probado: encuentra 4 leads de
+  Google con tasación agendada (filas 14, 20, 28 y 46 de «Leads Google») y arma la subida bien.
+  Google rechazó la primera subida con `TOO_RECENT_CONVERSION_ACTION` («la acción de conversión se
+  creó hace menos de 6 horas»). La corrida diaria de las 10:15 del 30/10 las va a subir. Cada
+  subida queda registrada en la planilla «Carames - Términos de búsqueda (Google Ads)» con la
+  respuesta de Google.
+- Al activar `Carames - Tasacion Web -> Planilla`, Make procesó la cola de webhooks retenidos: entraron
+  **14 leads web de Google Ads** (12 personas distintas) fechados 29/10 y marcados «Sin contestar».
+  Son pedidos de tasación reales de las últimas semanas que nunca llegaron a la planilla.
+- Los 5 anuncios nuevos están aprobados. Fuerza del anuncio: Lanús «Bueno» (2), Avellaneda
+  «Promedio», Lomas y Sucesiones «Deficiente» por los titulares fijados en posición 1; no afecta la
+  entrega pero conviene revisar a los 15 días.
