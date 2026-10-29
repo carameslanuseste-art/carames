@@ -424,3 +424,34 @@ Descartadas: Performance Max, socios de búsqueda y expansión a Display.
 - Los 5 anuncios nuevos están aprobados. Fuerza del anuncio: Lanús «Bueno» (2), Avellaneda
   «Promedio», Lomas y Sucesiones «Deficiente» por los titulares fijados en posición 1; no afecta la
   entrega pero conviene revisar a los 15 días.
+
+
+## Actualización 29/10, 20:40
+
+**Negativas portadas.** Las 226 negativas útiles de la campaña vieja (competidores, zonas fuera
+de cobertura, compradores, alquileres, créditos) se cargaron en la lista compartida «Negativas -
+Vendedores (frase)» (ID 12294147640), que ya está aplicada a las tres campañas. Google respondió
+200 sin errores parciales; la lista quedó con 350 términos. Se dejó afuera a propósito la negativa
+«wilde»: Wilde es partido de Avellaneda y entra en la zona.
+
+**Sufijo de URL por campaña.** Cada campaña agrega a la página de tasación un parámetro de zona:
+Lanús `z=lanus`, Lomas de Zamora `z=lomas`, Avellaneda `z=avellaneda`. Hoy la página lo ignora;
+con la versión nueva de `web/tasacion/index.html` el título cambia según la zona y el dato viaja
+a Make como `zona_campania`.
+
+**Página de tasación.** La versión mejorada está en `web/tasacion/` con su README (qué cambia y
+cómo publicarla). Verificada en 390 px y 1200 px: título dinámico, barra fija en móvil, prueba
+social junto al botón, plazo «24–48 h hábiles» consistente, zonas completas y dirección en el pie.
+
+**Regla de zona (definición operativa).** Entra en zona todo lo que esté dentro de los partidos de
+Lanús (Lanús Este y Oeste, Gerli, Remedios de Escalada, Valentín Alsina, Monte Chingolo), Lomas
+de Zamora (Lomas centro, Banfield, Temperley, Turdera, Llavallol, Villa Fiorito, Ingeniero Budge,
+San José) y Avellaneda (centro, Piñeyro, Gerli, Sarandí, Wilde, Villa Domínico, Dock Sud). Todo lo
+demás es «Fuera de zona» y se marca así en «Leads Google» para que el informe lo descuente. La
+campaña de Lomas ya tiene palabras clave propias de Banfield y Temperley (8 de 28) y segmenta por
+presencia en el partido completo.
+
+**Informe semanal de Make (escenario 5922617).** Está inactivo desde agosto; hoy el correo del
+lunes no incluye Google Ads. Si se reactiva, conviene que reporte tasaciones agendadas por canal y
+costo por tasación (cruzando «Leads Google» con la columna «Se concretó» / la subida offline) en
+vez de «conversiones», que mezcla formularios con tasaciones.
