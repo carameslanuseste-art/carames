@@ -28,13 +28,16 @@ Presupuesto diario activo tras los cambios: 14.000 + 5.000 + 5.000 (IG) + 3.100 
 
 ## 3. Cambios en Make
 
-- **`5541462` Leads Formulario -> Base de datos** (compradores, activo): el trigger de Facebook Lead Ads ahora pide `ad_id, ad_name, adset_id, adset_name, campaign_id, campaign_name, created_time, field_data, form_id, platform`. Variables nuevas en el módulo 30: `campana`, `conjunto`, `anuncio` (mapeadas a `1.campaignName`/`1.campaign_name`, etc.). Se escriben en Leads Meta columnas I (campaña) y J (anuncio) y en el texto de notas de `_BANDEJA` (col. 11). **Pendiente verificar con el primer lead real** que las columnas vengan con datos; si vienen vacías, el nombre del campo de salida es otro.
+- **`5541462` Leads Formulario -> Base de datos** (compradores, activo): el trigger de Facebook Lead Ads ahora pide `ad_id, ad_name, adset_id, adset_name, campaign_id, campaign_name, created_time, field_data, form_id, platform`. Variables nuevas en el módulo 30: `campana`, `conjunto`, `anuncio` (mapeadas a `1.campaignName`/`1.campaign_name`, etc.). Se escriben en Leads Meta columnas **K (campaña) y L (anuncio)** y en el texto de notas de `_BANDEJA` (col. 11). Corrección del 30/10: la primera versión escribía en I y J, pero esas columnas ya existen en la pestaña («Codigo clic Google» y «Fecha de contacto»); se movió a K y L. Los leads que entraron el 30/10 antes de la corrección pueden tener campaña/anuncio en I y J: revisar y mover a mano. **Pendiente verificar con el primer lead real** que las columnas vengan con datos; si vienen vacías, el nombre del campo de salida es otro.
 - **`5464268` Meta Ads ROI semanal** (lunes 8:05): nuevo system prompt con 4 reglas (no comparar conversaciones con formularios ni recomendar mover presupuesto; juzgar cada campaña por su objetivo; alertar saltos > 30%; recomendar solo creatividades/frecuencia). Primera corrida con reglas nuevas: lunes 2/11.
 - **`6706078` Leads Vendedores (Meta) -> Base**: sin cambios (la campaña de formulario está pausada).
 - **`6684379` SN WA · WhatsApp → planilla**: sin cambios. Webhook `https://hook.us2.make.com/8mnlhdf1sobd6uewgidn5g8wjka18swa` (habilitado, cola vacía). La pestaña `_WA_EVENTOS` solo tiene una prueba del 18/10: **la API de WhatsApp todavía no está en producción**.
 - **`5795614` Seguimiento suave ventas (18hs)**: inactivo y a medio hacer (token de ManyChat sin cargar, es un seguimiento de DMs de Instagram, no de leads de Meta). No activar hasta terminarlo.
 
 ## 4. Hallazgos sobre el sistema nuevo
+
+- Píxel: la cuenta tiene «Pixel de carames» (`1493868785198491`) activo, con disparos web al 30/10 y eventos de servidor al 19/10. Sirve para, más adelante, enviar el evento Lead del formulario de tasación web y optimizar campañas de vendedores por ese evento. El dataset viejo «Pagina web» (`234150012536474`) no dispara desde el 31/07.
+- El webhook de leads de Meta en Make (`2720424`) está atado al formulario `2147415745989399`. Un formulario nuevo de compradores **no entra al sistema** hasta conectarlo (nuevo hook o cambio del formId).
 
 - "Visita agendada" ya existe: SN 5 (`6148251`) clasifica eventos de calendario en tasación / visita / reserva / boleto / escritura y los deja en `_BANDEJA`. Lo que falta es el **vínculo con el lead**: las filas de calendario entran sin teléfono. Regla: el celular del cliente va en el título o descripción del evento.
 - Atribución de WhatsApp: el aviso de 360dialog trae `referral.source_id` (ID del anuncio) cuando el contacto llega desde un anuncio. El escenario guarda el aviso completo; el sistema debe leer ese campo.
@@ -62,7 +65,7 @@ Valores de mercado usados en el brief (VALORES_REFERENCIA_ZONAS, Lanús Este, 10
 1. Mensaje de bienvenida en la app de WhatsApp Business (ventas) con el texto de tasación; respuesta rápida `/tasacion`.
 2. Etiqueta "Meta Vendedores" en la app para los chats con recuadro "Mensaje de anuncio".
 3. Mandar el brief a la CM; pedir primero la pieza A1 departamento 9:16.
-4. Encabezados "Campaña" en I1 y "Anuncio" en J1 de la pestaña Leads Meta (planilla Carames_Leads_DM).
+4. Encabezados "Campaña" en **K1** y "Anuncio" en **L1** de la pestaña Leads Meta (planilla Carames_Leads_DM). Revisar las filas del 30/10: si I o J tienen nombres de campaña/anuncio, moverlos a K y L y dejar I y J vacías.
 5. Descartar el borrador sobre DEPTO 1 - FORMULARIO en Ads Manager.
 
 **Esta semana**
