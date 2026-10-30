@@ -457,14 +457,37 @@ fbq('track','PageView');
   var ZONAS = {
     lanus:      { h1: "en Lanús, Gerli, Escalada y Valentín Alsina", badge: "✓ Lanús Este y Oeste, Gerli, Escalada" },
     lomas:      { h1: "en Lomas de Zamora, Banfield y Temperley",    badge: "✓ Lomas de Zamora, Banfield y Temperley" },
-    avellaneda: { h1: "en Avellaneda, Sarandí y Villa Domínico",     badge: "✓ Avellaneda, Sarandí y Villa Domínico" }
+    avellaneda: { h1: "en Avellaneda, Sarandí y Villa Domínico",     badge: "✓ Avellaneda, Sarandí y Villa Domínico" },
+    sucesion:   { h1full: 'Heredaste una propiedad: <span class="hl">tasala gratis</span> y vendela sin vueltas', badge: "✓ Sucesiones y herencias",
+                  sub: "Si heredaste una casa, PH o departamento y pensás venderlo, te decimos cuánto vale hoy y qué documentación vas a necesitar. Sin costo, sin compromiso y con la discreción que estas situaciones piden.",
+                  faq: [
+                    ["¿Puedo tasar una propiedad en sucesión?", "Sí. La tasación no necesita que la sucesión esté terminada: es orientativa y te sirve para decidir entre herederos. Para vender sí hace falta la declaratoria de herederos o el testamento aprobado; te explicamos qué pasos faltan en tu caso."],
+                    ["¿Qué documentación hace falta para vender una propiedad heredada?", "Escritura del inmueble, partida de defunción, declaratoria de herederos (o testamento), y luego la inscripción de la sucesión en el Registro de la Propiedad. Trabajamos con escribanías de la zona que te acompañan en el trámite."],
+                    ["Somos varios herederos, ¿cómo lo manejan?", "Hablamos con quien ustedes designen y mantenemos a todos informados. La tasación es la misma para todos y ayuda a ponerse de acuerdo sobre el precio."]
+                  ] }
   };
   try {
     var z = (new URLSearchParams(location.search).get("z") || "").toLowerCase();
     var d = ZONAS[z];
     if (d) {
-      var h = document.getElementById("h1-zona"); if (h) h.textContent = d.h1;
+      var h = document.getElementById("h1-zona"); if (h && d.h1) h.textContent = d.h1;
+      if (d.h1full) { var h1 = document.querySelector(".hero h1"); if (h1) h1.innerHTML = d.h1full; }
       var b = document.getElementById("badge-zona"); if (b) b.textContent = d.badge;
+      var sub = document.getElementById("hero-sub"); if (sub && d.sub) sub.textContent = d.sub;
+      if (d.faq) {
+        var faqCard = document.querySelector(".card.faq");
+        var primero = faqCard ? faqCard.querySelector("details") : null;
+        if (faqCard && primero) {
+          d.faq.slice().reverse().forEach(function(par){
+            var det = document.createElement("details");
+            var sum = document.createElement("summary"); sum.textContent = par[0];
+            var p = document.createElement("p"); p.textContent = par[1];
+            det.appendChild(sum); det.appendChild(p);
+            faqCard.insertBefore(det, primero);
+            primero = det;
+          });
+        }
+      }
     }
   } catch(e) {}
 

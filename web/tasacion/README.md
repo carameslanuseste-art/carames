@@ -36,3 +36,17 @@ del GCLID ni el flujo de WhatsApp.
   decir «…en Lomas de Zamora, Banfield y Temperley».
 - Bajar hasta las reseñas: debe aparecer la barra roja/verde abajo.
 - Enviar un pedido de prueba: la barra desaparece y se abre WhatsApp como siempre.
+
+## Variante para sucesiones (30/10/2026)
+
+Con `?z=sucesion` la página cambia el título a «Heredaste una propiedad: tasala gratis y vendela
+sin vueltas», el subtítulo habla de herederos y documentación, y se agregan 3 preguntas frecuentes
+sobre sucesiones al principio del bloque de preguntas. El grupo de anuncios «Sucesiones y herencias»
+de Google Ads ya manda ese parámetro (sufijo de URL a nivel grupo). **Pendiente: volver a subir
+`index.php` al hosting** para que la variante esté en línea.
+
+## Imágenes para Meta (`web/meta/`)
+
+`retargeting-tasacion-1080x1080.jpg` y `-1080x1350.jpg`: creativos del anuncio de retargeting en
+Meta a quienes visitaron /tasacion y no enviaron el formulario. Se sirven desde GitHub (repositorio
+público) para que Meta los descargue.
