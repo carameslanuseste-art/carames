@@ -524,3 +524,33 @@ Checklist para la revisión de las tres campañas (pedir a Claude «hacé la rev
    leads que se descartan, revisar palabras clave y radio de segmentación.
 8. **Conversión primaria.** Cuando «Tasación agendada (offline)» tenga 15 o más por mes, dejarla como
    única conversión primaria y quitar «Solicitud de tasación» y «Lead form - Submit» de la puja.
+
+## Actualización 30/10, 17:30 — tres mejoras más
+
+**Llamadas solo en horario de atención.** La extensión de llamada (asset 389272335602, 011 4247-4336)
+que usan las tres campañas nuevas ahora se muestra lunes a viernes de 9 a 18 y sábados de 9 a 13.
+Fuera de ese horario el anuncio sale igual, con formulario y página, pero sin el botón de llamar.
+Verificado leyendo el asset.
+
+**Variante de sucesiones en la página.** `?z=sucesion` cambia el título a «Heredaste una propiedad:
+tasala gratis y vendela sin vueltas», el subtítulo habla a herederos y se agregan 3 preguntas
+frecuentes sobre sucesión (tasar antes de la declaratoria, documentación para vender, varios
+herederos). El grupo «Sucesiones y herencias» (203183559322) tiene sufijo de URL `z=sucesion` a
+nivel grupo, que pisa el `z=lanus` de la campaña. El escenario web de Make guarda esos leads con
+zona «Lanús · Sucesiones», marca «SUCESIÓN / HERENCIA» en la columna D y el mail de aviso lleva
+«[SUCESIÓN]» en el asunto. **Falta volver a subir `web/tasacion/index.php` al hosting** para que la
+variante esté en línea (hasta entonces el parámetro se ignora y la página se ve normal).
+
+**Retargeting en Meta.** Cuenta 934514726949339 (Caramés Bienes Raices - Sucursal Lanús Este).
+Audiencia «Visitó /tasacion sin enviar (14 días)» (120250742840160378): píxel 1493868785198491, URL
+contiene «tasacion» menos quienes dispararon el evento Lead, retención 14 días. Campaña «Vendedores -
+Retargeting visitantes /tasacion» (120250742925900378), objetivo clientes potenciales, categoría
+especial Vivienda, presupuesto $3.000/día a nivel campaña, puja al menor costo. Conjunto
+120250742944390378: solo la audiencia personalizada (Advantage+ Audience apagado por ese motivo),
+Argentina, optimizado a evento Lead del píxel, destino web. Anuncio 120250742962940378 con el
+creativo 1168365599016946 (imagen `web/meta/retargeting-tasacion-1080x1080.jpg`, servida desde
+GitHub; texto «¿Te quedaste con la duda de cuánto vale tu propiedad?…»; botón Más información;
+destino `/tasacion/?z=meta`, que la planilla registra como «Meta (retargeting)»). Publicado el 30/10.
+Quedó en el borrador de Ads Manager un anuncio fallido (120250742961170378, error de imagen
+duplicada) que no se publicó; se puede descartar desde Ads Manager. La audiencia tarda unos días en
+superar el mínimo de personas; hasta entonces el anuncio puede no entregar.
