@@ -174,7 +174,7 @@ function pieza(code, title, meta, specs) {
 const body = [];
 
 body.push(new Paragraph({ spacing: { after: 90 },
-  children: [run("CARAMÉS LANÚS ESTE   ·   BRIEF PARA COMMUNITY MANAGERS   ·   29 DE OCTUBRE DE 2026",
+  children: [run("CARAMÉS LANÚS ESTE   ·   BRIEF PARA COMMUNITY MANAGERS   ·   VERSIÓN 2   ·   30 DE OCTUBRE DE 2026",
     { size: 15, bold: true, color: INK3, font: "Consolas" })] }));
 body.push(new Paragraph({ spacing: { after: 200 },
   border: { bottom: { style: BorderStyle.SINGLE, size: 8, color: RULE } }, children: [] }));
@@ -196,6 +196,11 @@ body.push(gap(220));
 body.push(note("info", "Por qué este brief",
   "Los anuncios de propiedades funcionan: Meta los califica por encima del promedio y traen leads de comprador a unos $1.250. Lo que no funciona hoy es (1) la campaña de vendedores, que gastó $72.000 para 5 formularios porque pide una acción distinta a la que optimiza y no ofrece nada concreto; (2) la campaña de WhatsApp, que muestra las mismas 7 propiedades a las mismas 17.000 personas 4,4 veces en un mes y no tiene versión vertical; (3) el conjunto PH 1, que se cansó después de $300.000 en un solo PH; y (4) los videos de reconocimiento, que Meta ubica en el 10% de menor interacción porque son listados disfrazados de contenido."));
 
+body.push(gap(140));
+body.push(note("ok", "Empezá por acá: una sola pieza destraba la campaña nueva",
+  [run("La primera entrega es "), b("A1-b, variante departamento, en 9:16 (1080 × 1920)"), run(", para el martes 3 de noviembre. Con esa sola imagen se publica la campaña de Vendedores. Todo lo demás se entrega después, en el orden del calendario de la última página. No hace falta esperar a tener el bloque completo: cada pieza que esté lista se sube a la carpeta y se avisa.")],
+  [run("Material que se necesita para arrancar y que pide Gonzalo si no lo tenés: "), b("logo en vector (SVG o PDF) y en PNG con fondo transparente"), run(", "), b("los dos colores de marca en código hexadecimal"), run(" y "), b("la tipografía de marca"), run(" (si no hay una definida, usar Montserrat para títulos e Inter para textos, ambas gratuitas en Google Fonts). Fotos: pedir acceso a la carpeta de Drive de cada propiedad, donde está la ficha técnica y las fotos originales.")]));
+
 // ---------------- SECCIÓN 1: reglas ----------------
 body.push(...h1("Sección 1", "Reglas de producción para todas las piezas"));
 
@@ -216,6 +221,52 @@ body.push(bullet([b("Laterales: "), run("60 px de margen a cada lado.")]));
 body.push(bullet([b("Área útil real: "), run("1080 × 1330 px, entre los píxeles 250 y 1580 de alto.")]));
 body.push(gap(120));
 
+// esquema visual del lienzo 9:16 (proporcional: 1920 px -> 5760 DXA, 1 px = 3 DXA)
+function zona(label, px, fill, color, bold) {
+  return new TableRow({
+    height: { value: Math.max(Math.round(px * 3), 330), rule: HeightRule.EXACT }, cantSplit: true,
+    children: [new TableCell({
+      width: { size: 3240, type: WidthType.DXA },
+      shading: { type: ShadingType.CLEAR, fill, color: "auto" },
+      borders: cellBorders, verticalAlign: VerticalAlign.CENTER,
+      margins: { top: 40, bottom: 40, left: 120, right: 120 },
+      children: [new Paragraph({ alignment: AlignmentType.CENTER, spacing: { after: 0, line: 240 },
+        children: [run(label, { size: 14, color, bold })] })]
+    })]
+  });
+}
+function esquema916() {
+  const filas = [
+    zona("0–250 · ZONA RESERVADA · barra de perfil", 250, "F9E9E6", ALERT, true),
+    zona("250–300 · margen", 50, "FFFFFF", INK3, false),
+    zona("300–520 · TITULAR · 2 líneas · 84 px · blanco", 220, "E7EAF7", NEUTRAL, true),
+    zona("520–900 · FOTO LIMPIA, sin texto", 380, "F4F6F8", INK3, false),
+    zona("900–1150 · DATO GRANDE · USD 1.711 por m²", 250, "E7EAF7", NEUTRAL, true),
+    zona("1150–1200 · leyenda del dato · 40 px", 50, "FFFFFF", INK3, false),
+    zona("1200–1360 · FRANJA color marca · Tasación sin cargo 48 hs", 160, "E4F1EC", GO, true),
+    zona("1400–1520 · firma martillero 32 px · logo 140 px", 160, "F4F6F8", INK3, false),
+    zona("1580–1920 · ZONA RESERVADA · botón y texto del anuncio", 340, "F9E9E6", ALERT, true)
+  ];
+  const lienzo = new Table({ width: { size: 3240, type: WidthType.DXA }, columnWidths: [3240], rows: filas });
+  const notas = [
+    p([b("Cómo leer el esquema.")], { after: 80 }),
+    p("Es el lienzo de 1080 × 1920 visto de frente, a escala. Las dos franjas rojas son las zonas que Instagram y Facebook tapan con su propia interfaz: ahí no va nada. Todo lo que importa (titular, dato, franja de tasación, firma, logo) tiene que caer entre los 250 y los 1580 px de alto.", { after: 120 }),
+    p("Los márgenes laterales son de 60 px: el texto nunca toca el borde.", { after: 120 }),
+    p("El mismo esquema vale para la plantilla B0 de propiedades: ahí la foto ocupa de 0 a 1150 px y la franja blanca de datos va de 1150 a 1580.", { after: 120 }),
+    p("En 4:5 (1080 × 1350) y 1:1 (1080 × 1080) no hay zonas reservadas tan grandes, pero conviene dejar 60 px libres en los cuatro bordes.", { after: 0 })
+  ];
+  const celda = (kids, w) => new TableCell({ width: { size: w, type: WidthType.DXA }, borders: noBorders, verticalAlign: VerticalAlign.TOP, margins: { top: 0, bottom: 0, left: 0, right: 200 }, children: kids });
+  return new Table({
+    width: { size: W, type: WidthType.DXA }, columnWidths: [3440, W - 3440],
+    borders: { top: NONE, bottom: NONE, left: NONE, right: NONE, insideHorizontal: NONE, insideVertical: NONE },
+    rows: [new TableRow({ children: [celda([lienzo], 3440), celda(notas, W - 3440)] })]
+  });
+}
+body.push(new Paragraph({ children: [new PageBreak()] }));
+body.push(...h2("Esquema del lienzo 9:16 (pieza A1)"));
+body.push(esquema916());
+body.push(gap(160));
+
 body.push(...h2("Texto dentro de la imagen"));
 body.push(bullet([b("Titular: "), run("máximo 2 líneas, 6 a 8 palabras, cuerpo mínimo 72 px en 9:16 y 64 px en 1:1. Se tiene que leer en un celular sin hacer zoom.")]));
 body.push(bullet([b("Precio: "), run("siempre visible, siempre en USD con punto de miles («USD 65.000»), cuerpo igual o mayor que el titular. Es el dato que más decide el clic.")]));
@@ -231,6 +282,38 @@ body.push(bullet("Solo fotos propias de la propiedad o de calles de Lanús Este.
 body.push(bullet("Horizontal, iluminada de día, sin personas, sin objetos personales a la vista. Para 9:16, pedir al fotógrafo también una toma vertical del mejor ambiente; recortar una horizontal a 9:16 deja la foto sin contexto."));
 body.push(bullet("Para 25 de Mayo 837 - 4C (Meta la califica «calidad por debajo del promedio»): volver a fotografiar o cambiar la foto principal antes de volver a subirla."));
 body.push(gap(120));
+
+body.push(...h2("Especificaciones técnicas de Meta"));
+body.push(table(["Tipo", "Requisito", "Recomendación"], [
+  ["Imagen", "JPG o PNG · hasta 30 MB · mínimo 1080 px de ancho", "JPG calidad 90, perfil sRGB, sin capas. 1080 × 1920, 1080 × 1350 o 1080 × 1080 exactos."],
+  ["Video", "MP4 o MOV · H.264 · hasta 4 GB · relación 9:16 exacta", "1080 × 1920, 30 fps, audio AAC 128 kbps, duración 15 a 20 s. Primer cuadro con el mensaje principal (es la miniatura)."],
+  ["Carrusel", "2 a 10 tarjetas, todas del mismo tamaño", "1080 × 1080 todas; si una queda 1080 × 1350 Meta recorta las demás."],
+  ["Texto en imagen", "Ya no hay límite del 20%, pero Meta sigue bajando el alcance de imágenes muy cargadas", "Máximo titular + dato + franja. Nada más."],
+  ["Contraste", "Legible en pantalla de celular al sol", "Relación de contraste mínima 4,5:1 entre texto y fondo (se chequea en contrast-ratio.com)."],
+  ["Versiones", "Meta puede recortar automáticamente si falta un formato", "Entregar siempre los formatos pedidos; no confiar en el recorte automático, que corta el precio o el logo."]
+], [1500, 3300, 4226]));
+body.push(gap(160));
+
+body.push(...h2("Qué fotos pedir (para las piezas de propiedades)"));
+body.push(bullet([b("Una toma vertical del mejor ambiente"), run(" (living o cocina integrada, con ventana a la vista), desde la puerta, a la altura del pecho, celular o cámara en vertical. Es la foto que va arriba en la plantilla 9:16.")]));
+body.push(bullet([b("Una toma horizontal del mismo ambiente"), run(" para 1:1 y 4:5.")]));
+body.push(bullet([b("Fachada de día"), run(", desde la vereda de enfrente, sin autos tapando la entrada, cielo despejado si se puede.")]));
+body.push(bullet([b("Patio, terraza o balcón"), run(" si la propiedad lo tiene: es lo que más decide el clic en PH y casas.")]));
+body.push(bullet([b("Sin personas, sin mascotas, sin objetos personales"), run(" (fotos, ropa, productos de limpieza). Luces prendidas, persianas levantadas.")]));
+body.push(bullet([b("Fotos a resolución original"), run(" (mínimo 2000 px de ancho). Las comprimidas de WhatsApp no sirven para 1080 × 1920.")]));
+body.push(gap(160));
+
+body.push(...h2("Preguntas frecuentes"));
+body.push(table(null, [
+  ["¿Puedo usar Canva?", "Sí. Conviene para la plantilla B0: una vez armada, cada propiedad se baja en 10 minutos. Exportar siempre en JPG, calidad alta, tamaño exacto."],
+  ["¿Qué tipografía uso?", "La de marca si existe. Si no, Montserrat (títulos y números) e Inter (textos). Nunca más de dos tipografías por pieza."],
+  ["¿Puedo cambiar el texto del anuncio?", "El texto dentro de la imagen, dentro de lo que dice cada ficha, sí. El texto principal, titular y botón del anuncio los carga Gonzalo tal como están en este brief; si tenés una idea mejor, proponela antes de producir."],
+  ["¿Y si una propiedad no es apta crédito?", "No va etiqueta. Nunca poner «consultar» ni «a confirmar» en la imagen."],
+  ["¿Qué hago si el dato de m² cambia?", "El valor es de octubre 2026. Si la pieza sale en diciembre o después, pedir el valor nuevo antes de exportar."],
+  ["¿Dónde subo las piezas?", "Carpeta de Drive «META · Creativos · 2026-11», una subcarpeta por bloque (A, B, C, D, E). Al subir, avisar por WhatsApp con el código de la pieza."],
+  ["¿Puedo entregar una pieza antes que las otras del bloque?", "Sí, y es lo que conviene. Cada pieza que llega se puede publicar sola."]
+], [3000, 6026]));
+body.push(gap(160));
 
 body.push(...h2("Datos fijos de marca (copiar tal cual)"));
 body.push(table(null, [
@@ -260,7 +343,7 @@ body.push(note("stop", "Qué pasó y qué cambia",
 body.push(gap(120));
 
 body.push(...pieza("A1", "Imagen estática · «¿Cuánto vale tu propiedad en Lanús Este?»",
-  "2 variantes (casa y departamento) × 3 formatos = 6 archivos · prioridad 1 · entrega: viernes de esta semana", [
+  "2 variantes (casa y departamento) × 3 formatos = 6 archivos · prioridad 1 · entrega: A1-b departamento 9:16 el martes 3/11; el resto el viernes 6/11", [
   ["Objetivo", "Que un propietario se detenga en un número y escriba por WhatsApp. Es la pieza principal de la campaña nueva."],
   ["Variantes", [
     [b("A1-a Casa/PH: "), run("foto de fachada de una casa o PH real de Lanús Este, de día, calle arbolada, sin autos tapando. Idealmente una propiedad vendida por Caramés.")],
@@ -283,7 +366,7 @@ body.push(...pieza("A1", "Imagen estática · «¿Cuánto vale tu propiedad en L
 ]));
 
 body.push(...pieza("A2", "Carrusel · «Lo que vale tu propiedad, en 5 tarjetas»",
-  "5 tarjetas 1:1 (1080 × 1080) · prioridad 1 · entrega: viernes de esta semana", [
+  "5 tarjetas 1:1 (1080 × 1080) · prioridad 1 · entrega: viernes 6/11", [
   ["Objetivo", "Darle al propietario los datos que busca antes de escribir: cuánto vale, cómo es el proceso, quién lo hace. Va en el mismo conjunto que A1 para que Meta elija."],
   ["Tarjeta 1 · Gancho", "Fondo sólido de color de marca. Texto blanco 96 px, centrado, 3 líneas: «¿Cuánto vale tu propiedad hoy?». Abajo en 36 px: «Deslizá →». Logo arriba a la izquierda."],
   ["Tarjeta 2 · Dato departamentos", "Foto de edificio o living de Lanús Este con franja inferior. Texto: «Departamentos en Lanús Este» (48 px) · «USD 1.711/m²» (120 px) · «promedio de publicación · octubre 2026» (32 px)."],
@@ -297,7 +380,7 @@ body.push(...pieza("A2", "Carrusel · «Lo que vale tu propiedad, en 5 tarjetas�
 ]));
 
 body.push(...pieza("A3", "Reel 15 s · «Lo que vale tu casa en Lanús Este»",
-  "1 video 9:16, 15 segundos, con subtítulos · prioridad 2 · entrega: semana 2", [
+  "1 video 9:16, 15 segundos, con subtítulos · prioridad 2 · entrega: viernes 13/11 (guion aprobado antes de grabar)", [
   ["Objetivo", "Mismo mensaje que A1 en video para Reels. Reemplaza al reel «¿Querés vender?» que no funcionó."],
   ["Segundos 0 a 2", "Pantalla con el número grande (USD 1.711/m², departamentos) y voz o texto: «Esto vale hoy el metro en Lanús Este». Sin logo, sin intro. Si en 2 segundos no hay número, se van."],
   ["Segundos 2 a 6", "Tres fachadas de propiedades vendidas por Caramés, 1,3 s cada una, con «VENDIDA · [barrio]» en texto 64 px. Movimiento suave de zoom."],
@@ -310,7 +393,7 @@ body.push(...pieza("A3", "Reel 15 s · «Lo que vale tu casa en Lanús Este»",
 ]));
 
 body.push(...pieza("A4", "Imagen de retargeting · «Ya nos conocés»",
-  "1 imagen × 2 formatos (4:5 y 9:16) · prioridad 3 · entrega: semana 3", [
+  "1 imagen × 2 formatos (4:5 y 9:16) · prioridad 3 · entrega: viernes 20/11", [
   ["Objetivo", "Para el conjunto de quienes ya interactuaron con la página o el perfil. Recordatorio corto con la misma oferta."],
   ["Composición", "Foto de la fachada de la sucursal (Tucumán 1199 esq. Anatole France), de día. Franja sólida inferior con «¿Pensás vender? Tasación sin cargo en 48 hs» y el WhatsApp de ventas escrito: «11 6278-2740». Logo."],
   ["Texto principal del anuncio", "Ya conocés Caramés. Si estás pensando en vender tu propiedad en Lanús, te hacemos la tasación sin cargo y te decimos cuánto vale hoy. Escribinos y coordinamos la visita."],
@@ -325,7 +408,7 @@ body.push(note("warn", "Qué pasó y qué cambia",
 body.push(gap(120));
 
 body.push(...pieza("B0", "Plantilla reutilizable · ficha de propiedad en 9:16",
-  "1 plantilla editable (Canva, Figma o PSD) · prioridad 1 · entrega: miércoles de esta semana", [
+  "1 plantilla editable (Canva, Figma o PSD) · prioridad 1 · entrega: miércoles 4/11", [
   ["Objetivo", "Que cualquier propiedad se pueda bajar a 9:16 en 10 minutos con la misma estructura. Es la pieza más importante del brief porque se usa en los bloques B, C y E."],
   ["Estructura", [
     "Píxeles 0 a 1150: foto principal horizontal del mejor ambiente, centrada, a sangre a los lados. Sobre la foto, arriba a la izquierda a 280 px de alto, etiqueta sólida «APTA CRÉDITO» si corresponde (48 px, mayúsculas).",
@@ -339,7 +422,7 @@ body.push(...pieza("B0", "Plantilla reutilizable · ficha de propiedad en 9:16",
 ]));
 
 body.push(...pieza("B1", "Bajar a 9:16 las 7 propiedades activas de WhatsApp",
-  "7 imágenes 9:16 con la plantilla B0 · prioridad 1 · entrega: viernes de esta semana", [
+  "7 imágenes 9:16 con la plantilla B0 · prioridad 1 · entrega: viernes 6/11 (Pichincha 3020 primero)", [
   ["Propiedades", [
     "Pichincha 3020 (la mejor de la campaña: 188 conversaciones a $432, primero esta)",
     "Gaebeler 1025",
@@ -372,7 +455,7 @@ body.push(note("ok", "Qué pasó y qué cambia",
 body.push(gap(120));
 
 body.push(...pieza("C1", "Tres PH nuevos para el conjunto PH 1",
-  "3 fichas en 1:1, 4:5 y 9:16 con la plantilla B0 = 9 archivos · prioridad 2 · entrega: semana 2", [
+  "3 fichas en 1:1, 4:5 y 9:16 con la plantilla B0 = 9 archivos · prioridad 2 · entrega: viernes 13/11", [
   ["Objetivo", "Reemplazar a Sarmiento 1524 antes de que el costo por lead del conjunto se vaya arriba de $1.500."],
   ["Criterio", "PH con entrada independiente, aptos crédito, entre USD 60.000 y USD 110.000, con patio o terraza visible en la foto principal. Córdoba 1572 ya está cargado y puede ser uno de los tres."],
   ["Botón", "Más información (lleva al formulario instantáneo)"],
@@ -380,7 +463,7 @@ body.push(...pieza("C1", "Tres PH nuevos para el conjunto PH 1",
 ]));
 
 body.push(...pieza("C2", "Carrusel · «5 propiedades aptas crédito en Lanús Este»",
-  "6 tarjetas 1:1 (5 propiedades + 1 cierre) · prioridad 2 · entrega: semana 2", [
+  "6 tarjetas 1:1 (5 propiedades + 1 cierre) · prioridad 2 · entrega: viernes 13/11", [
   ["Objetivo", "Una sola pieza que muestra 5 propiedades y deja que cada persona elija la suya. Reparte la frecuencia entre 5 inmuebles en lugar de concentrarla en uno."],
   ["Tarjetas 1 a 5", "Una propiedad por tarjeta con la estructura de la plantilla B0 en 1:1: foto en los 700 px superiores, franja inferior con tipo y barrio, precio en 96 px, 3 datos, etiqueta «APTA CRÉDITO». Elegir una casa, dos PH y dos departamentos, todos aptos crédito, de distinto rango de precio."],
   ["Tarjeta 6 · Cierre", "Fondo de color de marca: «¿Ninguna es la tuya? Tenemos más en Lanús Este.» (72 px) · «Dejanos tus datos y te mostramos las que encajan con tu búsqueda» (40 px) · logo."],
@@ -397,7 +480,7 @@ body.push(note("warn", "Qué pasó y qué cambia",
 body.push(gap(120));
 
 body.push(...pieza("D1", "Reel 20 s · «3 errores al comprar en Lanús Este»",
-  "1 video 9:16, 20 segundos, subtítulos · prioridad 3 · entrega: semana 3", [
+  "1 video 9:16, 20 segundos, subtítulos · prioridad 3 · entrega: viernes 20/11", [
   ["Segundos 0 a 2", "Texto grande sobre fondo oscuro: «El error N° 1 al comprar en Lanús» con voz: «Este es el error que más vemos». Sin logo, sin saludo."],
   ["Segundos 2 a 8", "Error 1: «Comprar sin ver el estado del edificio». Plano de un frente de edificio y una toma del pasillo. Texto 64 px arriba."],
   ["Segundos 8 a 13", "Error 2: «No preguntar si es apta crédito antes de enamorarte». Plano de una escritura o de la etiqueta APTA CRÉDITO."],
@@ -425,9 +508,9 @@ body.push(...pieza("E1", "Dos reels de alquiler por mes",
 body.push(new Paragraph({ children: [new PageBreak()] }));
 body.push(...h1("Calendario y checklist", "Qué entregar cada semana"));
 body.push(table(["Semana", "Piezas", "Cantidad de archivos", "Quién revisa"], [
-  ["Semana 1 (hasta el 2/11)", "B0 plantilla · A1 (a y b, 3 formatos) · A2 carrusel · B1 las 7 de WhatsApp", "1 plantilla + 6 + 5 + 7 = 18 archivos + 2 copys", "Gonzalo: precios y dato de m²"],
-  ["Semana 2 (hasta el 9/11)", "A3 reel vendedores · C1 tres PH · C2 carrusel apto crédito · B2 primeras 3 propiedades nuevas", "1 video + 9 + 6 + 6 = 22 archivos + copys", "Gonzalo: guion del reel antes de grabar"],
-  ["Semana 3 (hasta el 16/11)", "D1 reel educativo · A4 retargeting · E1 primer reel de alquiler · B2 resto", "2 videos + 2 + 12 = 16 archivos + copys", "Gonzalo"],
+  ["Semana 1 (lunes 2 al viernes 6/11)", "Martes 3: A1-b depto 9:16 · Miércoles 4: B0 plantilla · Viernes 6: resto de A1, A2 carrusel, B1 las 7 de WhatsApp", "1 plantilla + 6 + 5 + 7 = 18 archivos + 2 copys", "Gonzalo: precios y dato de m²"],
+  ["Semana 2 (9 al 13/11)", "A3 reel vendedores · C1 tres PH · C2 carrusel apto crédito · B2 primeras 3 propiedades nuevas", "1 video + 9 + 6 + 6 = 22 archivos + copys", "Gonzalo: guion del reel antes de grabar"],
+  ["Semana 3 (16 al 20/11)", "D1 reel educativo · A4 retargeting · E1 primer reel de alquiler · B2 resto", "2 videos + 2 + 12 = 16 archivos + copys", "Gonzalo"],
   ["Continuo", "B2 cada propiedad nueva dentro de los 2 días de la ficha · E1 cada 15 días · aviso el mismo día de cada reserva o venta", "", ""]
 ], [2000, 3626, 2000, 1400]));
 body.push(gap(200));
@@ -442,6 +525,25 @@ body.push(bullet("El botón dibujado dice lo mismo que el botón del anuncio (Wh
 body.push(bullet("No hay fotos de banco, emojis en la imagen ni «Comentá VENDER»."));
 body.push(bullet("El archivo se llama según la convención y está en la subcarpeta del bloque."));
 body.push(gap(160));
+
+body.push(new Paragraph({ children: [new PageBreak()] }));
+body.push(...h1("Anexo", "Textos de los anuncios, listos para copiar"));
+body.push(p("Cada pieza se entrega junto con un archivo de texto con estas tres líneas, para que quien carga en Ads Manager copie y pegue sin reescribir. Son los mismos textos de las fichas, juntos en un solo lugar.", { after: 200 }));
+body.push(table(["Pieza", "Texto principal", "Titular", "Botón"], [
+  ["A1 · Vendedores imagen", "¿Tenés una propiedad en Lanús Este y querés saber cuánto vale hoy? Te hacemos la tasación sin cargo y sin compromiso: visitamos, comparamos con lo que se está vendiendo en tu cuadra y en 48 hs tenés el informe firmado por un martillero colegiado. Escribinos por WhatsApp y coordinamos.", "Tasación sin cargo en 48 hs", "Enviar mensaje de WhatsApp"],
+  ["A2 · Vendedores carrusel", "Antes de decidir, conocé el valor real de tu propiedad. Estos son los valores promedio de publicación en Lanús Este este mes. Si querés saber cuánto vale la tuya, te hacemos la tasación sin cargo en 48 hs.", "T1 ¿Cuánto vale tu propiedad? · T2 Departamentos · USD 1.711/m² · T3 Casas y PH · USD 725 y 671/m² · T4 Así trabajamos · T5 Tasación sin cargo", "Enviar mensaje de WhatsApp"],
+  ["A3 · Vendedores reel", "Mismo texto que A1.", "Tasación sin cargo en 48 hs", "Enviar mensaje de WhatsApp"],
+  ["A4 · Retargeting vendedores", "Ya conocés Caramés. Si estás pensando en vender tu propiedad en Lanús, te hacemos la tasación sin cargo y te decimos cuánto vale hoy. Escribinos y coordinamos la visita.", "¿Pensás vender? Tasación sin cargo", "Enviar mensaje de WhatsApp"],
+  ["B1 / B2 · Propiedades WhatsApp", "Documento «redes» de cada propiedad (primer párrafo + precio + «apta crédito» si corresponde). Cerrar con: «Escribinos por WhatsApp y coordinamos una visita.»", "[Tipo] en [barrio] · USD [precio]", "Enviar mensaje de WhatsApp"],
+  ["C1 · PH nuevos Formulario", "Documento «redes» de cada propiedad. Cerrar con: «Dejanos tus datos y te llamamos para coordinar una visita.»", "[Tipo] en [barrio] · USD [precio]", "Más información"],
+  ["C2 · Carrusel aptas crédito", "5 propiedades en Lanús Este que podés comprar con crédito hipotecario. Deslizá, elegí la que te gusta y dejanos tus datos: te llamamos para coordinar una visita.", "[Tipo] · [barrio] · USD [precio] (una por tarjeta) · T6 ¿Ninguna es la tuya?", "Más información"],
+  ["D1 · Reel educativo", "Estos son los 3 errores que más vemos cuando alguien compra su primera propiedad en Lanús. Si estás buscando, escribinos: te decimos qué propiedades encajan con tu presupuesto y cuáles son aptas crédito.", "3 errores al comprar en Lanús", "Enviar mensaje de WhatsApp"],
+  ["E1 · Reels alquiler", "Documento «redes» de la propiedad, con precio del alquiler en pesos y requisitos. Cerrar con: «Escribinos por WhatsApp al 11 3679-5419.»", "[Ambientes] en [barrio] · $[precio]/mes", "Ver perfil de Instagram"]
+], [1500, 3826, 2100, 1600]));
+body.push(gap(200));
+body.push(note("warn", "Regla de oro para los textos",
+  "El botón dibujado en la imagen tiene que decir lo mismo que el botón del anuncio. Si la campaña va a WhatsApp, la imagen dice «Escribinos por WhatsApp»; si va a formulario, dice «Pedí más info». Mezclarlos es lo que hundió la campaña anterior de vendedores."));
+body.push(gap(200));
 
 body.push(note("info", "Cómo vamos a saber si funcionó",
   "A1/A2/A3: costo por conversación de la campaña de vendedores por debajo de $3.000 en los primeros 7 días. B0/B1/B2: frecuencia de WhatsApp por debajo de 3,0 y costo por conversación de vuelta a $450 o menos. C1/C2: costo por formulario del conjunto PH 1 de vuelta a $1.250. D1: CTR mayor a 1%. Si una pieza no llega, se cambia la pieza, no el presupuesto."));
