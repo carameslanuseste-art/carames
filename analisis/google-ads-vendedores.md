@@ -538,8 +538,9 @@ frecuentes sobre sucesión (tasar antes de la declaratoria, documentación para 
 herederos). El grupo «Sucesiones y herencias» (203183559322) tiene sufijo de URL `z=sucesion` a
 nivel grupo, que pisa el `z=lanus` de la campaña. El escenario web de Make guarda esos leads con
 zona «Lanús · Sucesiones», marca «SUCESIÓN / HERENCIA» en la columna D y el mail de aviso lleva
-«[SUCESIÓN]» en el asunto. **Falta volver a subir `web/tasacion/index.php` al hosting** para que la
-variante esté en línea (hasta entonces el parámetro se ignora y la página se ve normal).
+«[SUCESIÓN]» en el asunto. Publicada en el hosting el 30/10 a las 17:34 (respaldo
+`index_anterior_2.php`); verificado desde afuera que el archivo servido es idéntico al del repo y que
+las cinco variantes de la página responden sin errores.
 
 **Retargeting en Meta.** Cuenta 934514726949339 (Caramés Bienes Raices - Sucursal Lanús Este).
 Audiencia «Visitó /tasacion sin enviar (14 días)» (120250742840160378): píxel 1493868785198491, URL

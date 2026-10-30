@@ -42,8 +42,10 @@ del GCLID ni el flujo de WhatsApp.
 Con `?z=sucesion` la página cambia el título a «Heredaste una propiedad: tasala gratis y vendela
 sin vueltas», el subtítulo habla de herederos y documentación, y se agregan 3 preguntas frecuentes
 sobre sucesiones al principio del bloque de preguntas. El grupo de anuncios «Sucesiones y herencias»
-de Google Ads ya manda ese parámetro (sufijo de URL a nivel grupo). **Pendiente: volver a subir
-`index.php` al hosting** para que la variante esté en línea.
+de Google Ads ya manda ese parámetro (sufijo de URL a nivel grupo). Publicada el 30/10/2026 a las
+17:34 (el archivo anterior quedó como `index_anterior_2.php`). Verificado desde afuera: el archivo
+servido es idéntico al del repo y las cinco variantes (sucesion, lomas, lanus, avellaneda, sin
+parámetro) responden bien sin errores de JavaScript.
 
 ## Imágenes para Meta (`web/meta/`)
 
