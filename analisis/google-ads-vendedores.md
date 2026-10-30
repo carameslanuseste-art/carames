@@ -472,3 +472,55 @@ desconocida queda como «Campaña <id>»). El escenario web además ahora llena 
 «Zona» con lo que eligió la persona en el formulario, que antes solo iban dentro del texto de D.
 Probado con un envío real al webhook (fila de prueba verificada y borrada). Los leads anteriores al
 30/10 no tienen zona de campaña; el correo de aviso del lead web ahora también dice la campaña.
+
+## Actualización 30/10
+
+**Primer día completo de las campañas nuevas.** Hasta las 11:00 del 30/10 las tres campañas sumaban
+9 impresiones y 1 clic (la campaña vieja hacía 2.000 a 2.800 impresiones y 35 a 90 clics por día).
+Estado «Aprendizaje de la estrategia de puja»; anuncios, palabras clave y extensiones aprobados.
+Causa: la estrategia de CPA objetivo creada el 29/10 arranca sin historial y puja muy bajo.
+
+**Cambio de puja (30/10, 15:10).** Las tres campañas pasaron de la cartera de CPA objetivo
+(12251090708, $35.000 con tope de CPC $3.000) a **Maximizar conversiones sin objetivo**, a nivel
+campaña. El gasto sigue limitado por los presupuestos diarios ($28.000 + $10.000 + $7.000). Volver
+al CPA objetivo con tope cuando haya 30 conversiones acumuladas (estimado: 2 a 3 semanas). La
+cartera 12251090708 queda creada sin campañas, lista para reutilizar.
+
+**Conversiones offline.** La corrida de las 10:15 del 30/10 subió las 4 tasaciones agendadas
+(Sabrina 13/08, Graciela Bacay 26/08, Graciela Fernández 2/09, Teresa 1/10) con respuesta 200 y
+job IDs de Google. Aparecen en Google Ads en la fecha de cada tasación, no en la de subida.
+
+**Informe semanal de Make (5922617) rehecho y reactivado.** Ahora se llama «Carames - Google Ads
+semanal (tasaciones por zona y costo por tasacion)». Corre los lunes 09:25 y manda un correo a
+carameslanuseste@gmail.com (además de escribir el bloque del correo del lunes en el datastore
+125425) con: inversión de las tres campañas (últimos 7 días), leads de Google, tasaciones
+agendadas con origen Google (7 y 28 días), costo por tasación, leads «Sin contestar», y el
+desglose por zona (Lanús, Lomas de Zamora, Avellaneda, sin zona) usando la columna Z de «Leads
+Google» y la columna J «Se concretó» que marca la subida offline. Compara contra la semana anterior
+a partir de la segunda corrida.
+
+## Revisión pendiente: 7 a 10 de noviembre de 2026
+
+Checklist para la revisión de las tres campañas (pedir a Claude «hacé la revisión de Google Ads»):
+
+1. **Entrega.** Impresiones y clics por día y por campaña desde el 30/10. Cuota de impresiones y
+   cuánto se pierde por presupuesto y por ranking. Si Lanús ($28.000) agota el presupuesto antes de
+   las 18 h, mover presupuesto desde la que menos convierta.
+2. **Términos de búsqueda.** Listar todos los términos con clics; agregar negativas a la lista
+   «Negativas - Vendedores (frase)» (12294147640): compradores, alquileres, créditos, zonas fuera de
+   los tres partidos, nombres de otras inmobiliarias.
+3. **Costo por tasación agendada por zona.** Cruzar inversión por campaña con la columna Z de «Leads
+   Google» y las filas con J «Sí». Comparar con el informe semanal del lunes 3/11 y 10/11.
+4. **Anuncios.** Los RSA de Lomas (829926940525) y Sucesiones (830013640997) figuran «Deficiente»
+   por los titulares fijados; si siguen así, soltar los pines o agregar titulares. Revisar CTR por
+   anuncio.
+5. **Formulario de Google (lead form).** Cuántos leads entraron por formulario vs. por la web y qué
+   porcentaje terminó en tasación agendada. Si el formulario trae leads de baja calidad, bajarlo a
+   objetivo «más calificado».
+6. **Puja.** Si hay 30 o más conversiones acumuladas, volver a CPA objetivo (cartera 12251090708,
+   ajustar el objetivo al costo real por conversión observado). Si no, seguir con Maximizar
+   conversiones una semana más.
+7. **Regla de zona.** Contar leads «Fuera de zona» por campaña; si la campaña de Lomas sigue trayendo
+   leads que se descartan, revisar palabras clave y radio de segmentación.
+8. **Conversión primaria.** Cuando «Tasación agendada (offline)» tenga 15 o más por mes, dejarla como
+   única conversión primaria y quitar «Solicitud de tasación» y «Lead form - Submit» de la puja.
