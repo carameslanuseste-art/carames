@@ -462,3 +462,13 @@ vez de «conversiones», que mezcla formularios con tasaciones.
 `?z=lomas`, `?z=lanus` y `?z=avellaneda` cambian el título, la barra fija aparece en móvil, sin
 errores de JavaScript, y siguen presentes los dos webhooks de Make, el píxel de Meta, la
 etiqueta de conversión de Google Ads y la captura del GCLID.
+
+**Zona de campaña en «Leads Google» (30/10, 21:15).** Columna nueva Z «Campaña Google Ads (zona)»
+con valores Lanús / Lomas de Zamora / Avellaneda. La completan los dos escenarios que escriben en
+esa pestaña: «Tasacion Web -> Planilla» (5480977) a partir del parámetro `zona_campania` que manda la
+página (viene del sufijo de URL `z=` de cada campaña), y «Formulario Google Ads -> Planilla»
+(6406919) a partir del `campaign_id` del formulario de Google (IDs de las tres campañas; una campaña
+desconocida queda como «Campaña <id>»). El escenario web además ahora llena N «Tipo propiedad» y O
+«Zona» con lo que eligió la persona en el formulario, que antes solo iban dentro del texto de D.
+Probado con un envío real al webhook (fila de prueba verificada y borrada). Los leads anteriores al
+30/10 no tienen zona de campaña; el correo de aviso del lead web ahora también dice la campaña.
