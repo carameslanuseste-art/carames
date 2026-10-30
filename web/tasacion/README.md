@@ -1,9 +1,12 @@
 # Página /tasacion — versión mejorada (29/10/2026)
 
-`index.html` es la página https://caramespropiedades.com.ar/tasacion/ tal como estaba
-publicada el 29/10/2026, con las mejoras de abajo. Para publicarla hay que reemplazar el
-archivo de `/tasacion/index.html` en el hosting por este (misma ruta, mismas imágenes:
-usa `/img/logo-carames.png` que ya existe en el sitio).
+`index.php` es la página https://caramespropiedades.com.ar/tasacion/ con las mejoras de
+abajo. **Publicada el 29/10/2026** en el cPanel de Zetahosting como
+`public_html/tasacion/index.php` (es HTML puro; el nombre `.php` lo exige el `.htaccess`
+de esa carpeta). La versión anterior quedó como `index_anterior.php` en la misma carpeta.
+Para publicar un cambio futuro: subir este archivo por el Administrador de archivos del
+cPanel con el nombre `index.php`, pisando el actual. Usa `/img/logo-carames.png`, que ya
+existe en el sitio.
 
 ## Qué cambia
 

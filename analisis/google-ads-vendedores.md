@@ -455,3 +455,10 @@ presencia en el partido completo.
 lunes no incluye Google Ads. Si se reactiva, conviene que reporte tasaciones agendadas por canal y
 costo por tasación (cruzando «Leads Google» con la columna «Se concretó» / la subida offline) en
 vez de «conversiones», que mezcla formularios con tasaciones.
+
+**Página publicada (29/10, 21:05).** La versión nueva quedó en línea en
+`public_html/tasacion/index.php` (Zetahosting, cPanel); el archivo anterior se conservó como
+`index_anterior.php`. Verificado desde afuera: el archivo servido es idéntico al del repo,
+`?z=lomas`, `?z=lanus` y `?z=avellaneda` cambian el título, la barra fija aparece en móvil, sin
+errores de JavaScript, y siguen presentes los dos webhooks de Make, el píxel de Meta, la
+etiqueta de conversión de Google Ads y la captura del GCLID.
