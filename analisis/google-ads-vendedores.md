@@ -555,3 +555,39 @@ destino `/tasacion/?z=meta`, que la planilla registra como «Meta (retargeting)�
 Quedó en el borrador de Ads Manager un anuncio fallido (120250742961170378, error de imagen
 duplicada) que no se publicó; se puede descartar desde Ads Manager. La audiencia tarda unos días en
 superar el mínimo de personas; hasta entonces el anuncio puede no entregar.
+
+## Revisión de entrega — 31/10, 12:40
+
+**Entrega por día (tres campañas nuevas):**
+
+| Día | Lanús | Lomas de Zamora | Avellaneda | Total |
+|---|---|---|---|---|
+| 29/10 (desde las 20 h) | 1 impr. | 1 impr. | 3 impr. | 5 |
+| 30/10 | 30 impr. · 2 clics · $1.518 | 8 impr. · 1 clic · $919 | 1 impr. | 39 |
+| 31/10 (hasta las 12 h) | 23 impr. · 1 clic · $3.337 | 2 impr. | 2 impr. | 27 |
+
+La campaña vieja hacía 2.000 a 2.800 impresiones por día. Cuota de impresiones de Lanús 67-81 %
+(lo que pierde es por ranking, no por presupuesto): el problema no es la puja sino que las frases
+en concordancia de frase casi no coinciden con búsquedas en los tres partidos. Términos de búsqueda
+en tres días: 14, todos de 1 o 2 impresiones; aparecieron búsquedas de la costa («vendo urgente
+departamento frente al mar», «santa teresita», «en la costa») por la concordancia de frase de
+«vender mi casa rápido» y similares.
+
+**Aplicado:**
+
+1. **Concordancia amplia.** Se agregaron 14 palabras clave en concordancia amplia en cada uno de los
+   tres grupos por zona (42 en total): tasar mi casa, tasar propiedad, tasación de propiedades,
+   quiero vender mi casa, quiero vender mi propiedad, tasación de inmuebles, necesito vender mi
+   casa, cuánto vale mi casa, cuánto vale mi propiedad, tasar casa, tasar departamento, tasación
+   vivienda, vender mi casa, tasación inmobiliaria. Las de concordancia de frase siguen activas (la
+   concordancia no se puede editar; conviven). La segmentación geográfica por presencia en los tres
+   partidos y las 360 negativas siguen limitando a quién se le muestra. Es la combinación que Google
+   recomienda con Maximizar conversiones. El grupo de sucesiones no se tocó.
+2. **Negativas nuevas (10)** en «Negativas - Vendedores (frase)»: frente al mar, en la costa, santa
+   teresita, san bernardo, villa gesell, pinamar, mar del plata, mar de ajo, costa atlantica, mis
+   tasaciones.
+
+**Criterio para la próxima verificación (lunes 3/11 con el informe semanal, o antes si se pide):**
+las tres campañas juntas deberían superar las 300 impresiones diarias el domingo 2/11. Si no,
+revisar la segmentación geográfica (pasar de «presencia» a «presencia o interés») y el estado de
+aprendizaje.
