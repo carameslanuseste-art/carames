@@ -510,7 +510,7 @@ Checklist para la revisión de las tres campañas (pedir a Claude «hacé la rev
    «Negativas - Vendedores (frase)» (12294147640): compradores, alquileres, créditos, zonas fuera de
    los tres partidos, nombres de otras inmobiliarias.
 3. **Costo por tasación agendada por zona.** Cruzar inversión por campaña con la columna Z de «Leads
-   Google» y las filas con J «Sí». Comparar con el informe semanal del lunes 3/11 y 10/11.
+   Google» y las filas con J «Sí». Comparar con el informe semanal del lunes 2/11 y 9/11.
 4. **Anuncios.** Los RSA de Lomas (829926940525) y Sucesiones (830013640997) figuran «Deficiente»
    por los titulares fijados; si siguen así, soltar los pines o agregar titulares. Revisar CTR por
    anuncio.
