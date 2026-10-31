@@ -587,7 +587,7 @@ departamento frente al mar», «santa teresita», «en la costa») por la concor
    teresita, san bernardo, villa gesell, pinamar, mar del plata, mar de ajo, costa atlantica, mis
    tasaciones.
 
-**Criterio para la próxima verificación (lunes 3/11 con el informe semanal, o antes si se pide):**
-las tres campañas juntas deberían superar las 300 impresiones diarias el domingo 2/11. Si no,
+**Criterio para la próxima verificación (lunes 2/11 a las 11:00, después del informe semanal de las 09:25):**
+las tres campañas juntas deberían superar las 300 impresiones diarias el domingo 1/11. Si no,
 revisar la segmentación geográfica (pasar de «presencia» a «presencia o interés») y el estado de
 aprendizaje.
