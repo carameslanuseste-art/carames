@@ -614,7 +614,7 @@ búsquedas de compradores («casas en lanus», «venta departamento 2 ambientes 
 Las trae sobre todo la palabra amplia «tasación vivienda» (1.155 impresiones en 4 días). Clics
 pagados a esas búsquedas: unos 25 de los 100 de los cuatro días.
 
-**Aplicado el 3/11:** 157 negativas nuevas en «Negativas - Vendedores (frase)»: los nombres de
+**Aplicado el 3/11:** 154 negativas nuevas (la lista quedó con 514) en «Negativas - Vendedores (frase)»: los nombres de
 inmobiliarias observados (en frase), patrones genéricos («negocios inmobiliarios», «servicios
 inmobiliarios», «desarrollos inmobiliarios», «broker inmobiliario», «asesor inmobiliario», «opiniones
 de», «buscador», «compramos tu propiedad», «casas en», «casa en», «ph en», «2 ambientes», «3
