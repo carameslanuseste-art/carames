@@ -591,3 +591,42 @@ departamento frente al mar», «santa teresita», «en la costa») por la concor
 las tres campañas juntas deberían superar las 300 impresiones diarias el domingo 1/11. Si no,
 revisar la segmentación geográfica (pasar de «presencia» a «presencia o interés») y el estado de
 aprendizaje.
+
+## Verificación de entrega — 3/11 (corrida agendada para el lunes 2/11, ejecutada el martes 3/11 a las 20:00)
+
+**La concordancia amplia resolvió la entrega.** Tres campañas juntas:
+
+| Día | Impresiones | Clics | Gasto | Conv. |
+|---|---|---|---|---|
+| Sáb 31/10 | 64 | 4 | $16.539 | 0 |
+| Dom 1/11 | 46 | 3 | $4.524 | 0 |
+| Lun 2/11 | 961 | 31 | $29.081 | 1 |
+| Mar 3/11 (hasta las 20 h) | 1.647 | 62 | $79.059 | 0 |
+
+Por campaña el martes: Lanús 1.022 impr. / 50 clics / $55.998; Lomas 443 / 10 / $19.985; Avellaneda
+182 / 2 / $3.075. Cuota de impresiones 60-89 %, sin pérdida por presupuesto. Las tres siguen en
+«Aprendizaje». No se cambió la segmentación geográfica (sigue «presencia»): no hizo falta.
+
+**Problema nuevo: búsquedas de otras inmobiliarias.** De 150 términos con 3 o más impresiones (616
+impresiones), cerca de dos tercios son nombres de inmobiliarias de la zona («del sol propiedades»,
+«vieytes propiedades banfield», «brick propiedades», «tyark negocios inmobiliarios», etc.) y
+búsquedas de compradores («casas en lanus», «venta departamento 2 ambientes avellaneda centro»).
+Las trae sobre todo la palabra amplia «tasación vivienda» (1.155 impresiones en 4 días). Clics
+pagados a esas búsquedas: unos 25 de los 100 de los cuatro días.
+
+**Aplicado el 3/11:** 157 negativas nuevas en «Negativas - Vendedores (frase)»: los nombres de
+inmobiliarias observados (en frase), patrones genéricos («negocios inmobiliarios», «servicios
+inmobiliarios», «desarrollos inmobiliarios», «broker inmobiliario», «asesor inmobiliario», «opiniones
+de», «buscador», «compramos tu propiedad», «casas en», «casa en», «ph en», «2 ambientes», «3
+ambientes», «venta departamento», «venta de inmuebles»), zonas fuera («mar azul», «escobar»,
+«alejandro korn»), portales («icasas», «lj ramos», «propiedades com») y la marca propia con acento
+(«caramés», «carmes»), más «prop», «venta» e «inmuebles» en exacta. No se puso «propiedades» como
+negativa porque bloquearía «tasación de propiedades», que es búsqueda de vendedor.
+
+**Qué sigue.** Revisar términos de búsqueda cada semana mientras dure la concordancia amplia: cada
+inmobiliaria nueva que aparezca va a la lista. Si en la revisión del 7/11 la proporción de búsquedas de
+competidores sigue arriba del 30 %, pausar la amplia «tasación vivienda» y dejar las amplias más
+específicas («tasar mi casa», «cuánto vale mi casa», «quiero vender mi casa»).
+
+**Otras verificaciones:** el informe semanal corrió el lunes 2/11 a las 09:25 (éxito); la subida
+offline corrió todos los días a las 10:15 (sin tasaciones nuevas para subir desde el 30/10).
