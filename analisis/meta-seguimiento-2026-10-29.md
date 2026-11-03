@@ -97,3 +97,7 @@ Valores de mercado usados en el brief (VALORES_REFERENCIA_ZONAS, Lanús Este, 10
 - Con el primer lead: verificar en una ejecución de `5541462` que `campana`/`anuncio` lleguen con datos.
 - 12/11 10:00 (tarea programada `trig_01X66twxEHMDoAp4GceL432Y`): relectura de la cuenta contra la línea de base, verificación de Make y de `_WA_EVENTOS`, resumen con 3 acciones. Sin cambios en la cuenta sin confirmación.
 - Si se decide: pasar DEPTO 1 y el resto a un marcador no es posible (17 km mínimo); la alternativa es mejorar calidad con preguntas de calificación.
+
+## 8. Actualización 03/11
+- Revisión del 31/10 guardada en `meta-revision-2026-10-31.md` (efecto de los cambios, campaña de retargeting creada el 30/10 desde otra sesión, 21 acciones enumeradas). Ninguna de las acciones 1 a 9 de esa lista fue aplicada todavía: esperan confirmación de Gonzalo.
+- Revisión exhaustiva programada para el **sábado 7/11 a las 10:00** (tarea `Revisión exhaustiva Meta Ads 7/11`), además de la del 12/11.
