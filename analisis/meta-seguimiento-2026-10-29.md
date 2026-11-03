@@ -100,4 +100,4 @@ Valores de mercado usados en el brief (VALORES_REFERENCIA_ZONAS, Lanús Este, 10
 
 ## 8. Actualización 03/11
 - Revisión del 31/10 guardada en `meta-revision-2026-10-31.md` (efecto de los cambios, campaña de retargeting creada el 30/10 desde otra sesión, 21 acciones enumeradas). Ninguna de las acciones 1 a 9 de esa lista fue aplicada todavía: esperan confirmación de Gonzalo.
-- Revisión exhaustiva programada para el **sábado 7/11 a las 10:00** (tarea `Revisión exhaustiva Meta Ads 7/11`), además de la del 12/11.
+- Revisión exhaustiva programada para el **viernes 6/11 a las 10:00** (tarea `Revisión exhaustiva Meta Ads 6/11`), además de la del 12/11.
