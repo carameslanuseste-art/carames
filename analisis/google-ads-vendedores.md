@@ -723,6 +723,21 @@ gastaron mucho sin traer tasaciones.
 8. **Meta: campaña de retargeting pausada** (120250742925900378). Reactivar cuando la página junte
    más de 1.000 visitantes.
 
+### Extensiones del anuncio, revisadas y corregidas el 6/11 (verificado)
+
+Las tres campañas ya tenían enlaces de sitio (6 a 7 por campaña), 9 textos destacados, 2 fragmentos
+estructurados, llamada, formulario de Google e imágenes. Se corrigió lo que restaba:
+
+- **Enlaces «Tasá en Lanús Este» y «Tasá en Lanús Oeste»** apuntaban a la página vieja de contacto
+  (`/contacto?tasa=true`). Ahora van a `/tasacion/`.
+- **Fragmento «Servicios: Tasación, Venta de propiedades, Alquileres»** reemplazado por «Tasación
+  gratis, Venta de casas, Venta de departamentos, Venta de PH, Sucesiones». «Alquileres» atraía
+  inquilinos.
+- **Enlace nuevo «Sucesiones y herencias»** (`/tasacion/?z=sucesion`) en las tres campañas.
+- **Texto destacado nuevo «Vendemos casas y deptos»** (quedaron 10 por campaña).
+- **Enlace a nivel cuenta «Tasa Con Nosotros»** (iba a la página vieja de contacto y Google no deja
+  editarlo) quedó pausado. A nivel cuenta sigue activo solo «Sobre Nosotros».
+
 ### Pendiente de Gonzalo
 
 - **Llamar a los leads y actualizar la planilla.** Se entregó la lista de 45 pedidos «Sin contestar»
