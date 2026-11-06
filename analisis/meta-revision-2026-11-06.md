@@ -69,3 +69,13 @@ Cuenta `act_934514726949339`. Ventana principal: últimos 7 días (30/10 al 05/1
 
 ## Próxima revisión
 Programada para el jueves 12/11 a las 10:00. Si se aplican los puntos 1 a 5 esta semana, el 12/11 ya se ve el efecto en costo por formulario y en el gasto del retargeting.
+
+## Correcciones (misma mañana, 10:40)
+Gonzalo preguntó si la revisión era correcta. Los números son los de Meta de hoy; estas son las lecturas que corrijo o matizo:
+- **WhatsApp «bajó a la mitad»**: la mitad de la caída es el recorte de presupuesto que apliqué el 29/10. Gasto de 66.261 a 37.246 (−44%), conversaciones de 98 a 47 (−52%), costo por conversación de 693 a 793 (+14%). El dato real es ese +14%, concentrado en PH 1 - WPP (659 a 980). No es un deterioro de la campaña.
+- **Formulario de 1.197 a 1.427**: PH 1 es el principal responsable, pero CASA 1 también subió de 997 a 1.313 (+32%) por el aumento a ARS 14.000/día. Si se pausa PH 1 (acción 1), CASA 1 va a recibir todavía más presupuesto y no va a volver a 997; esperar que se mantenga alrededor de 1.300.
+- **Alquileres - IG sí empeoró de verdad**: gasto parecido (26.206 contra 24.504), visitas al perfil de 1.811 a 1.568 y leads de 31 a 16.
+- **Retargeting /tasacion**: el píxel sí registra el evento Lead (411 en los últimos 7 días, 41 a 71 por día), así que los 0 resultados no son un problema de medición: es el público. La acción 2 se sostiene.
+- **Edad, género y horario**: celdas chicas en 30 días; son direccionales, no para decidir presupuesto. El pico de 17 h (6.580) es ruido.
+- **Columnas K y L**: inferí que se llenan porque el rango de la pestaña pasó de J a L; no vi los valores de las filas nuevas.
+- **Borradores**: la campaña Vendedores - WhatsApp tiene **dos conjuntos en borrador**: el que armé (CONVERSATIONS, `120250730423450378`) y uno duplicado del formulario (`120250447392620378`, optimización LEAD_GENERATION, sin validar) que vino con la duplicación del 29/10. Hay que borrar ese segundo antes de publicar, si no salen los dos. También hay dos borradores viejos de abril y mayo («Campaña de Ventas» y «Campaña de ventas - remarketing») con errores: descartar.
