@@ -703,14 +703,33 @@ decisiones viejas que restan alcance a propósito: «inmobiliaria» en frase (ta
 «tasación inmobiliaria lanús») y «online». Se mantienen porque en el análisis del 29/10 esas búsquedas
 gastaron mucho sin traer tasaciones.
 
-### Propuestas (no aplicadas)
+### Segunda tanda, aprobada por Gonzalo el mismo 6/11 (verificada)
 
-- **Si al 13/11 sigue sin haber pedidos de tasación web**, pausar las amplias que quedan («vender mi
-  casa», «quiero vender mi casa», «tasación de propiedades», «tasar propiedad») y sumar frases largas
-  de vendedor con zona («vender mi casa en lanús», «tasar casa en banfield», «vender departamento en
-  avellaneda»). Menos volumen, más intención.
-- **Meta:** bajar el retargeting a $1.500 por día o pausarlo hasta que la audiencia crezca.
-- **Planilla:** marcar el estado de cada lead y anotar «Sí - tasación DD/MM/AAAA» cuando se agenda. Es
-  lo que le enseña a Google qué clic termina en tasación.
+5. **Pausadas las 39 amplias restantes** (13 por grupo: «vender mi casa», «quiero vender mi casa»,
+   «tasación de propiedades», «tasar propiedad», «tasar mi casa», «tasar casa», «tasar departamento»,
+   «tasación inmobiliaria», «tasación de inmuebles», «quiero vender mi propiedad», «cuánto vale mi
+   casa», «cuánto vale mi propiedad», «vender mi casa rápido»). Quedan 14 amplias pausadas por grupo;
+   se pueden volver a activar si hace falta volumen.
+6. **41 frases nuevas de vendedor con zona**: Lanús 12 («vender mi casa en lanús», «tasar casa en
+   lanús», «vender ph en lanús», «tasación gratis lanús», «vender casa lanús este / oeste»…), Lomas 14
+   («vender mi casa en banfield / temperley / lomas de zamora», «tasar casa en temperley», «vender
+   departamento banfield»…), Avellaneda 15 («vender mi casa en avellaneda / wilde / sarandí», «vender
+   casa dock sud», «vender casa gerli», «tasar departamento avellaneda»…) e «inmobiliaria para vender
+   mi casa» en los tres. Totales activos: Lanús 52 frases, Lomas 42, Avellaneda 43, Sucesiones 10.
+7. **Puja cambiada a «Maximizar clics» con tope de $2.500 por clic** en las tres campañas. Con
+   «Maximizar conversiones» y sin conversiones Google pujaba a ciegas (clics de $5.000 y $6.000) y el
+   tope de $3.000 del 29/10 no regía porque esa puja no admite tope. Volver a «Maximizar conversiones»
+   cuando haya 15 o 20 tasaciones cargadas.
+8. **Meta: campaña de retargeting pausada** (120250742925900378). Reactivar cuando la página junte
+   más de 1.000 visitantes.
 
-Próxima revisión: viernes 13/11.
+### Pendiente de Gonzalo
+
+- **Llamar a los leads y actualizar la planilla.** Se entregó la lista de 45 pedidos «Sin contestar»
+  (sin pruebas ni duplicados) con nombre, teléfono y dirección. Marcar la columna H («Contactado»,
+  «Fuera de zona», «No es un lead») y, si se agenda, la columna J: «Sí - tasación DD/MM/AAAA». Es lo
+  que le enseña a Google qué clic termina en tasación y lo que sube la carga diaria de las 10:15.
+
+Próxima revisión: viernes 13/11. Qué mirar: impresiones y clics por día con solo frase (se espera
+una baja fuerte de volumen), CPC medio (debe quedar por debajo de $2.500), términos de búsqueda de las
+frases nuevas, pedidos de tasación web con zona en la columna Z, y si hubo tasaciones cargadas.
