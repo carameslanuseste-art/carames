@@ -745,6 +745,28 @@ estructurados, llamada, formulario de Google e imágenes. Se corrigió lo que re
   «Fuera de zona», «No es un lead») y, si se agenda, la columna J: «Sí - tasación DD/MM/AAAA». Es lo
   que le enseña a Google qué clic termina en tasación y lo que sube la carga diaria de las 10:15.
 
-Próxima revisión: viernes 13/11. Qué mirar: impresiones y clics por día con solo frase (se espera
-una baja fuerte de volumen), CPC medio (debe quedar por debajo de $2.500), términos de búsqueda de las
-frases nuevas, pedidos de tasación web con zona en la columna Z, y si hubo tasaciones cargadas.
+## Revisión pendiente: viernes 13/11/2026, 10:20 (programada)
+
+Período a mirar: desde la tarde del 6/11 hasta el 13/11. Estado de partida: solo frases activas,
+puja Maximizar clics con tope $2.500, 563 negativas, anuncios sin titulares fijados, extensiones
+corregidas, Meta pausado.
+
+1. **Volumen y costo por día y por campaña.** Se espera una baja fuerte de impresiones y clics. El
+   CPC medio tiene que quedar por debajo de $2.500. Mirar cuota de impresiones y pérdida por
+   ranking.
+2. **Pedidos de tasación.** Conversiones por acción en Google Ads y filas nuevas en «Leads Google»
+   con zona en la columna Z. Es el número que importa.
+3. **Términos de búsqueda por palabra clave.** Proporción de competidores y compradores (tiene que
+   ser mucho menor que con amplia). Confirmar que las 41 frases con zona tengan impresiones.
+   Negativas nuevas si hace falta.
+4. **Calidad de los anuncios** de Lomas, Avellaneda y Sucesiones después de quitar los titulares
+   fijados. Si siguen «Deficiente», proponer titulares nuevos.
+5. **Planilla:** estados cargados en la columna H y tasaciones en la J. Si hay tasaciones, confirmar
+   que la subida offline de las 10:15 las subió a Google.
+6. **Decisión según resultado:**
+   - 3 a 5 pedidos web en la semana: mantener y seguir limpiando términos.
+   - 50 o más clics y 0 pedidos: el problema pasa a la página o la oferta; revisar ahí.
+   - Menos de 30 impresiones por día: reactivar 2 o 3 amplias («vender mi casa», «quiero vender mi
+     casa») con las negativas nuevas y volver a medir.
+7. **Puja:** volver a «Maximizar conversiones» solo cuando haya 15 o 20 tasaciones cargadas.
+8. **Informe semanal:** confirmar que corrió el lunes 9/11 a las 09:25.
