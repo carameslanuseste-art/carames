@@ -101,3 +101,12 @@ Valores de mercado usados en el brief (VALORES_REFERENCIA_ZONAS, Lanús Este, 10
 ## 8. Actualización 03/11
 - Revisión del 31/10 guardada en `meta-revision-2026-10-31.md` (efecto de los cambios, campaña de retargeting creada el 30/10 desde otra sesión, 21 acciones enumeradas). Ninguna de las acciones 1 a 9 de esa lista fue aplicada todavía: esperan confirmación de Gonzalo.
 - Revisión exhaustiva programada para el **viernes 6/11 a las 10:00** (tarea `Revisión exhaustiva Meta Ads 6/11`), además de la del 12/11.
+
+## 9. 06/11 (tarde): cambios aplicados con ok de Gonzalo
+Gonzalo pausó él mismo el retargeting /tasacion (`120250742925900378`) a la mañana. Rechazó pausar PH 1 - FORMULARIO y DEPTO 1 - WPP. Aprobó los puntos 4 a 7:
+- **Pausado** el conjunto «reconocimiento - vendedores» (`120250447203420378`; gastó ARS 8.380 en la semana con CTR 0,13%). Se reactiva con la pieza B0.
+- **Pausado** «Contenido MIO - informativo» (`120250449141800378`).
+- **Descartado** el borrador duplicado «Vendedores - Lanús - Wpp» (`120250447392620378`). El borrador de Vendedores - WhatsApp queda con un solo conjunto (`120250730423450378`).
+- **«Inquilino vs propietarios»** recreado como anuncio nuevo (`120250868838320378`, misma publicación `108052454036434_1771507371647835`) en el conjunto de refuerzo (`120250448871210378`) y mandado a publicar. Verificar que figure activo.
+- **Alquileres - IG solo feed + stories: NO se pudo crear por API.** La cuenta no está habilitada para crear conjuntos de visitas al perfil desde la API (error 2016153 «Ad account isn't eligible for Profile Visit ads»); con el objetivo alternativo da «Performance goal isn't available». Hay que hacerlo desde el Administrador: duplicar «Alquileres - IG», ubicaciones manuales solo feed e historias de Instagram, mínimo diario ARS 1.500 (la campaña es CBO a 5.000/día).
+- **Reporte de los lunes (5464268) arreglado.** Dos errores: (1) el análisis de Claude se leía con `8.content[1].text` y Make no indexa así; ahora `first(map(8.content; "text"; "type"; "text"))`. (2) Los leads de formulario se contaban con `onsite_web_lead` (daba 50 en vez de 68); ahora `onsite_conversion.lead_grouped`. Dos corridas de prueba OK con análisis. El snapshot `snapshot_meta_sem` se restauró a los valores del 02/11 (231751;165;85;6498) para que el 9/11 compare contra la semana correcta.
