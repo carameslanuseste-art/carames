@@ -630,3 +630,87 @@ específicas («tasar mi casa», «cuánto vale mi casa», «quiero vender mi ca
 
 **Otras verificaciones:** el informe semanal corrió el lunes 2/11 a las 09:25 (éxito); la subida
 offline corrió todos los días a las 10:15 (sin tasaciones nuevas para subir desde el 30/10).
+
+## Revisión completa — viernes 6/11/2026
+
+Período: 30/10 al 6/11 (8 días, el 6/11 hasta el mediodía). Objetivo que se mide: dueños de Lanús,
+Avellaneda y Lomas de Zamora que piden tasación para vender.
+
+### Resultados
+
+| Campaña | Impr. | Clics | Costo | Conversiones |
+|---|---|---|---|---|
+| Lanús (incluye Sucesiones) | 3.487 | 160 | $161.126 | 1 llamada |
+| Lomas de Zamora | 1.389 | 37 | $53.262 | 1 formulario de Google |
+| Avellaneda | 857 | 20 | $34.973 | 0 |
+| **Total** | **5.733** | **217** | **$249.360** | **2** |
+
+- **Cero «Solicitud de tasación» de la página web** desde las campañas nuevas, con 217 clics. Las dos
+  conversiones fueron una llamada desde el anuncio (Lanús) y un formulario dentro de Google (Abigail
+  Ortega, Lomas, 2/11).
+- La página funciona: se probó el formulario de punta a punta el 6/11 (los dos webhooks de Make y la
+  etiqueta de Google se disparan). El problema no es técnico.
+- **La concordancia amplia se lleva el 90 % del gasto** ($225.143 de $249.360) y trae sobre todo
+  nombres de otras inmobiliarias y búsquedas de compradores. Cruce término → palabra clave:
+  - «tasación vivienda» (amplia): 32 clics, $41.042, casi todos competidores («roomix», «bianco
+    cirino», «cendra», «brick», «kotler»…) o compradores («deptos en don orione», «casa barracas»).
+  - «vender mi casa» (amplia): 31 clics, $35.922; mitad competidores («amalvy», «torossian», «di
+    tomaso»), algunas útiles («como vender mi casa rapido», «se puede vender una casa con deuda»).
+  - «quiero vender mi casa» (amplia): 14 clics, $16.299; casi todo competidores.
+  - «tasación de propiedades» (amplia): 8 clics, $13.806; todo competidores.
+- Frase: 157 impresiones y 10 clics en toda la semana. Sola no alcanza para tener volumen.
+- Celular: 95 % de los clics. Cuota de impresiones 45-90 %, sin pérdida por presupuesto.
+- Anuncios: Lanús «Excelente» y «Promedio»; Lomas, Avellaneda y Sucesiones «Deficiente» por tener
+  dos titulares fijados en la posición 1.
+
+### Planilla de leads
+
+- 19 filas desde el 29/10: 16 del lote del 29/10, 2 de la web sin zona (3/11 y 4/11, no vienen de las
+  campañas nuevas porque no traen el parámetro de zona) y 1 formulario de Google (2/11, Lomas).
+- **Todas las filas desde el 1/10 (29) están «Sin contestar»** y ninguna tiene «Se concretó». Si se
+  las contactó por WhatsApp sin actualizar la planilla, Google Ads no recibe ninguna tasación
+  agendada y la subida offline diaria no tiene nada para subir.
+
+### Meta (retargeting)
+
+7 días: $18.117, 2.203 impresiones, 390 personas alcanzadas (frecuencia ≈ 5,6), 53 clics, 0 leads.
+La audiencia de visitantes de la página es chica; con $3.000 por día se le muestra lo mismo muchas
+veces a las mismas personas.
+
+### Aplicado el 6/11 (verificado)
+
+1. **Pausada la amplia «tasación vivienda»** en Lanús, Lomas y Avellaneda (criterio acordado: más de
+   30 % de competidores). Siguen activas sus versiones en frase.
+2. **71 negativas nuevas** en «Negativas - Vendedores (frase)»: 31 apellidos o marcas de inmobiliarias
+   en amplia («roomix», «amalvy», «torossian», «cendra», «procopio», «forcinito», «butorovich»,
+   «pastelletto», «kotler», «calcagno», «morrone»…), 28 en frase («estudio rubio», «am propiedades»,
+   «sil propiedades», «rodriguez propiedades», «adrian mercado», «la matanza», «don orione»,
+   «registro de propiedades»…) y 14 búsquedas de compradores en exacta («casas en lanus», «casas en
+   banfield», «propiedades lomas de zamora», «propiedades avellaneda», «lanus propiedades»…).
+3. **Corrección de un error del 3/11:** se quitaron las negativas de frase «casa en», «casas en», «ph
+   en», «2 ambientes» y «3 ambientes». Bloqueaban búsquedas de vendedores como «vender mi casa en
+   Lanús», «tasar casa en Banfield» o «vender ph en Lanús». En su lugar quedaron las versiones exactas
+   de compradores del punto 2. La lista quedó con 563 negativas.
+4. **Titulares sin fijar** en los anuncios de Lomas, Avellaneda y Sucesiones (los textos no cambiaron).
+   La calidad del anuncio queda «pendiente» mientras Google la recalcula; los tres siguen aprobados.
+
+No se tocó presupuesto, puja (Maximizar conversiones sin objetivo) ni ubicación.
+
+### Revisión de la lista de negativas
+
+Se revisó la lista completa (172 amplias, 366 frase, 30 exactas antes de la corrección). Quedan dos
+decisiones viejas que restan alcance a propósito: «inmobiliaria» en frase (también bloquea
+«tasación inmobiliaria lanús») y «online». Se mantienen porque en el análisis del 29/10 esas búsquedas
+gastaron mucho sin traer tasaciones.
+
+### Propuestas (no aplicadas)
+
+- **Si al 13/11 sigue sin haber pedidos de tasación web**, pausar las amplias que quedan («vender mi
+  casa», «quiero vender mi casa», «tasación de propiedades», «tasar propiedad») y sumar frases largas
+  de vendedor con zona («vender mi casa en lanús», «tasar casa en banfield», «vender departamento en
+  avellaneda»). Menos volumen, más intención.
+- **Meta:** bajar el retargeting a $1.500 por día o pausarlo hasta que la audiencia crezca.
+- **Planilla:** marcar el estado de cada lead y anotar «Sí - tasación DD/MM/AAAA» cuando se agenda. Es
+  lo que le enseña a Google qué clic termina en tasación.
+
+Próxima revisión: viernes 13/11.
