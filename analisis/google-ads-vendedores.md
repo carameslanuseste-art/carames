@@ -781,6 +781,11 @@ hay tope de $2.500 por clic y 571 negativas. Opciones puestas a Gonzalo el 9/11:
 «quiero vender mi casa» y «vender mi casa» en amplia solo en Lanús y comparar contra Lomas y
 Avellaneda en frase; (B) reactivarlas en las tres zonas; (C) esperar al 13/11 con frase sola.
 
+**Decisión de Gonzalo (9/11, 11:50): opción A.** Reactivadas en amplia «quiero vender mi casa»
+(526739335) y «vender mi casa» (133326657) solo en el grupo Vendedores - Lanús. Lomas y Avellaneda
+siguen en frase. El 13/11 se comparan las dos configuraciones: costo por clic, proporción de
+competidores en los términos y pedidos de tasación por zona.
+
 ## Revisión pendiente: viernes 13/11/2026, 10:20 (programada)
 
 Período a mirar: desde la tarde del 6/11 hasta el 13/11. Estado de partida: solo frases activas,
