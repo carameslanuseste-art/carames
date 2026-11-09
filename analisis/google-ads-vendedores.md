@@ -745,6 +745,42 @@ estructurados, llamada, formulario de Google e imágenes. Se corrigió lo que re
   «Fuera de zona», «No es un lead») y, si se agenda, la columna J: «Sí - tasación DD/MM/AAAA». Es lo
   que le enseña a Google qué clic termina en tasación y lo que sube la carga diaria de las 10:15.
 
+## Revisión intermedia — lunes 9/11/2026, 11:40
+
+Primeros tres días con solo frase, puja «Maximizar clics» tope $2.500 y Meta pausado (sáb 7, dom 8 y
+la mañana del lunes 9).
+
+| Día | Impr. | Clics | Costo | CPC medio | Conversiones |
+|---|---|---|---|---|---|
+| Vie 6/11 (mañana con amplia) | 1.037 | 36 | $37.509 | $1.042 | 0 |
+| Sáb 7/11 | 46 | 2 | $898 | $449 | 0 |
+| Dom 8/11 | 56 | 3 | $2.232 | $744 | 0 |
+| Lun 9/11 (hasta las 11) | 16 | 1 | $497 | $497 | 0 |
+
+- **El volumen se desplomó:** de 600 a 1.700 impresiones por día con amplia a 46 y 56 por día con
+  frase. La cuota de impresiones está en 90-100 % y la pérdida por ranking en 0-10 %: se muestra en
+  casi todas las búsquedas que existen. No hay más búsquedas de frase en la zona. El presupuesto
+  ($45.000 por día) se usa al 2-5 %.
+- **La calidad del tráfico cambió por completo.** Los 15 términos del fin de semana son de dueños:
+  «vende casa», «vendo casa urgente avellaneda», «como calcular el precio de una casa para venderla»,
+  «tasar una casa», «donde puedo vender mi casa rapido», «vendo casa en lanus». Cero competidores.
+  Aparecieron búsquedas fuera de zona («vendo urgente casa en merlo san luis», «santa clara del mar»,
+  «miramar»): se agregaron 8 negativas (lista en 571).
+- **CPC medio $449 a $744**, muy por debajo del tope.
+- **Anuncios:** los cinco quedaron «Excelente» o «Bueno» después de quitar los titulares fijados
+  (antes tres eran «Deficiente»).
+- **Planilla:** ningún lead nuevo desde el 4/11 y ningún estado cargado desde el 1/10 (los 45 siguen
+  «Sin contestar»).
+- **Automatizaciones:** informe semanal corrió el lunes 9/11 a las 09:25 (éxito); subida offline corrió
+  el 7, 8 y 9 a las 10:15 (nada para subir). Meta sigue pausado (gastó $2.508 el 6/11 antes de la
+  pausa).
+
+**Conclusión:** la frase sola trae la gente correcta pero en cantidad insuficiente para generar
+tasaciones (unos 3 clics por día). La decisión que queda es cuánta amplia volver a abrir ahora que
+hay tope de $2.500 por clic y 571 negativas. Opciones puestas a Gonzalo el 9/11: (A) reactivar
+«quiero vender mi casa» y «vender mi casa» en amplia solo en Lanús y comparar contra Lomas y
+Avellaneda en frase; (B) reactivarlas en las tres zonas; (C) esperar al 13/11 con frase sola.
+
 ## Revisión pendiente: viernes 13/11/2026, 10:20 (programada)
 
 Período a mirar: desde la tarde del 6/11 hasta el 13/11. Estado de partida: solo frases activas,
