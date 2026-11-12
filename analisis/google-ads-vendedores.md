@@ -890,7 +890,51 @@ tasación y se anota en la planilla.
    no se pudo convertir en recurrente (limitación de la plataforma), así que se reprograma cada
    semana a mano; la próxima es el 20/11 a las 10:20.
 
-Próxima revisión: viernes 20/11, 10:20 (programada).
+### Propuestas abiertas al 12/11 (no aplicadas, esperan decisión o datos de Gonzalo)
+
+- **Aviso diario de leads sin contestar.** Escenario en Make que cada mañana mande por mail los
+  pedidos de tasación con más de 24 horas sin estado en la columna H. Media hora de trabajo; Gonzalo
+  lo activa. Es la mejora de más impacto que queda.
+- **Prueba social en titulares y página.** Necesita datos reales: propiedades vendidas en 2026, años
+  en la zona, cantidad de sucursales. Con eso, dos titulares nuevos por zona y una línea en la página.
+- **Respuesta automática por WhatsApp al lead** apenas entra. Requiere la API de WhatsApp Business.
+- **Seguimiento a los que «solo quieren saber cuánto vale»:** rango de valor por WhatsApp en 24 horas
+  y recontacto a los 7 y 30 días. Proceso de ustedes, no de Google.
+- **Reseñas en Google de cada vendedor atendido** y publicaciones semanales en la ficha de Google.
+- **Cartelería y buzoneo** en Lanús Este y Oeste con «¿Vendés? Tasamos gratis en 48 h».
+- **Pendientes viejos:** cambiar la contraseña del hosting; limpiar los borradores sin publicar del
+  Administrador de anuncios de Meta; probar el formulario nuevo con «Enviar datos de prueba al
+  webhook» y confirmar que aparece la fila «PRUEBA - borrar» en la planilla.
+- **Lo que no se recomienda:** subir presupuestos (se usa el 15 %), volver a «Maximizar conversiones»
+  antes de 15 o 20 tasaciones cargadas, reabrir amplia en Lanús o Lomas (probado dos veces, dos veces
+  trajo ruido).
+
+## Revisión pendiente: viernes 20/11/2026, 10:20 (programada), completa y exhaustiva
+
+Período: jueves 12/11 (tarde) a viernes 20/11. Punto de partida: frases en las tres zonas; amplias
+cortas solo «quiero vender mi casa» (Lanús y Avellaneda) y «tasar mi casa» (Avellaneda); Avellaneda
+con 57 frases; puja «Maximizar clics» tope $2.500; 576 negativas; horario 06 a 24 h; formulario de
+Google nuevo 438765214380; Meta pausado.
+
+1. **Volumen y costo** por día y campaña, CPC medio (debe seguir bajo $2.500), cuota de impresiones.
+   Comparar días hábiles contra la semana del 7 al 12.
+2. **Pedidos de tasación** por acción en Google Ads y filas nuevas en «Leads Google» con zona (columna
+   Z). Costo por pedido por zona. Cuántos llegaron por la web y cuántos por el formulario de Google.
+3. **Formulario de Google nuevo:** cuántos envíos, cuántos marcados «No es un lead» (compradores),
+   y si el webhook entregó todo (comparar con el informe de leads de Google Ads).
+4. **Avellaneda:** si las frases y las amplias cortas le dieron volumen y de qué calidad. Si la amplia
+   supera el 30 % de ruido, pausarla.
+5. **Términos de búsqueda** por palabra clave y concordancia: competidores, compradores, fuera de
+   zona. Negativas nuevas.
+6. **Planilla:** estados cargados en H y tasaciones en J (sobre todo Marta 10/11 y Leonardo 11/11); si
+   la subida offline de las 10:15 subió alguna conversión.
+7. **Anuncios y extensiones:** calidad, clics por anuncio, enlace «Sucesiones».
+8. **Puja:** mantener «Maximizar clics» salvo 15 o 20 tasaciones cargadas.
+9. **Automatizaciones:** informe semanal del lunes 16/11, subida offline diaria, escenarios web y
+   formulario sin errores. Meta sigue pausado.
+10. **Decisión según resultado:** 3 o más pedidos en la semana, mantener; 50 o más clics y 0 pedidos,
+    revisar página y oferta; menos de 100 impresiones por día, evaluar qué abrir.
+11. Repasar las propuestas abiertas de arriba y decidir cuáles arrancan.
 
 ## Revisión pendiente: viernes 13/11/2026 (hecha el 12/11, ver arriba)
 
