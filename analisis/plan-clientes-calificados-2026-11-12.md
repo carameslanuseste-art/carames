@@ -57,3 +57,8 @@ Nada de esto se aplica hasta el 20/11. Ese día se revisa la cuenta, se confirma
 - Reporte de los lunes corregido: costo por conversación y por formulario con el gasto de cada campaña; costo por resultado en cada línea; regla «clientes reales» en el análisis.
 - Brief de contenido solo para vendedores entregado (`Brief creativos - Vendedores - Meta Ads.docx`).
 - Revisión programada: viernes 20/11 a las 10:00.
+
+## Estado al 12/11 por la tarde
+- Hecho: encabezados K1/L1. Reporte de los lunes corregido. Brief de vendedores entregado.
+- No aplicado (Gonzalo pidió esperar al 20/11): acciones 1 a 7. DEPTO 1 sigue activo, Guido sigue con tope de 2.000, ubicaciones sin cambios.
+- Ofrecido además, pendiente de ok: recordatorio diario por mail de leads de Meta en «Sin contestar» (últimos 3 días); mensaje para la CM con el brief.

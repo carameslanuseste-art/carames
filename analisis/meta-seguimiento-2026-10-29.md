@@ -125,3 +125,9 @@ La revisión programada del jueves 12/11 se movió al **viernes 13/11 a las 10:0
 - **Compradores (Formulario y WhatsApp) y Vendedores:** se juzgan por **cliente indicado** (compradores que visitan, propietarios que piden tasación y dan dirección), no por costo por resultado. No se pausan ni recortan anuncios por costo; se pausan por no traer clientes.
 - **Seguidores IG (interacción) y Reconocimiento:** se juzgan por **costo** (costo por visita al perfil, costo por ThruPlay, alcance). Ahí sí se optimiza por eficiencia.
 - Esta regla va en el prompt del reporte semanal (5464268) y en los prompts de las revisiones programadas.
+
+## 13. 12/11 (tarde): encabezados K1/L1 hechos; todo lo demás queda para el 20/11
+- **Encabezados «Campaña» (K1) y «Anuncio» (L1) escritos** en la pestaña Leads Meta por Make (escenario temporal, ya borrado). Verificado en la planilla.
+- Gonzalo rechazó aplicar hoy las acciones de Meta (pausar DEPTO 1, subir el tope de Guido, ubicaciones). Quedan como propuestas para el 20/11. No se tocó nada en la cuenta.
+- El 20/11 se hace una **revisión exhaustiva y completa** y se le proponen todos los cambios juntos (plan en `plan-clientes-calificados-2026-11-12.md`). Ofrecidos y pendientes de su ok: aviso inmediato de cada lead al celular (Make), reporte de visitas por anuncio (Make), recordatorio diario de leads «Sin contestar» (Make), mensaje de WhatsApp para la CM con el brief.
+- Pendientes de Gonzalo antes del 20/11: columna Estado completa todos los días, formulario «Mayor intención» con dos preguntas, pieza A1 a la CM.
