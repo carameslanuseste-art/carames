@@ -786,7 +786,90 @@ Avellaneda en frase; (B) reactivarlas en las tres zonas; (C) esperar al 13/11 co
 siguen en frase. El 13/11 se comparan las dos configuraciones: costo por clic, proporción de
 competidores en los términos y pedidos de tasación por zona.
 
-## Revisión pendiente: viernes 13/11/2026, 10:20 (programada)
+## Revisión completa — jueves 12/11/2026 (adelantada un día a pedido de Gonzalo)
+
+Período: sábado 7/11 a jueves 12/11 al mediodía. Configuración vigente: frases + puja «Maximizar
+clics» tope $2.500 + 571 negativas; desde el lunes 9/11 al mediodía, además, «quiero vender mi casa»
+y «vender mi casa» en amplia solo en Lanús.
+
+### Resultados
+
+| Día | Impr. | Clics | Costo | CPC medio | Pedidos de tasación |
+|---|---|---|---|---|---|
+| Sáb 7/11 | 46 | 2 | $898 | $449 | 0 |
+| Dom 8/11 | 56 | 3 | $2.232 | $744 | 0 |
+| Lun 9/11 | 78 | 5 | $7.860 | $1.572 | 0 |
+| Mar 10/11 | 127 | 10 | $6.142 | $614 | 1 |
+| Mié 11/11 | 133 | 9 | $8.067 | $896 | 1 |
+| Jue 12/11 (mediodía) | 70 | 3 | $6.203 | $2.068 | 0 |
+| **Total** | **510** | **32** | **$31.402** | **$981** | **2** |
+
+| Campaña | Impr. | Clics | Costo | Pedidos |
+|---|---|---|---|---|
+| Lanús | 408 | 21 | $21.082 | 1 |
+| Lomas de Zamora | 74 | 8 | $8.124 | 1 |
+| Avellaneda | 28 | 3 | $2.196 | 0 |
+
+- **Dos pedidos de tasación web, los primeros desde que existen las campañas por zona**, y los dos con
+  zona cargada en la planilla:
+  - Mar 10/11, Lanús: casa en Valentín Alsina (Lanús Oeste). Búsqueda «tasar mi casa», frase; el clic
+    costó $207.
+  - Mié 11/11, Lomas: casa en Banfield. Búsqueda que disparó «tasación de propiedades», frase; el clic
+    costó $626.
+  - **Costo por pedido de tasación: $15.700.** La semana anterior: $249.360 y cero pedidos web.
+- **La amplia en Lanús volvió a traer basura.** «vender mi casa» amplia: 159 impresiones, 9 clics,
+  $7.477 (35 % del gasto de Lanús), 0 pedidos. Términos: «inmobiliaria cerca de mi» (36 impr., 3
+  clics), «yrigoyen y castelli lomas de zamora» ($2.448 un clic), «inmobiliaria lomas de zamora»,
+  «alvear 2040 banfield», «antorena propiedades banfield», «propiedades cerca de mi». «quiero vender mi
+  casa» amplia: 3 impresiones, 0 clics (inofensiva).
+- **Las frases traen gente correcta:** «como puedo saber el valor de mi casa», «cuanto cobra la
+  inmobiliaria por vender una casa», «como calcular el precio de una casa para venderla», «vendo mi
+  casa», «vendo casa urgente avellaneda», «tasar una casa». Una sola fuera de zona («merlo san luis»,
+  ya bloqueada el 9/11).
+- **Volumen en días hábiles:** 127 a 133 impresiones y 9 a 10 clics por día en total. Lanús 105-108
+  impresiones (40 % de la amplia), Lomas 15-25, Avellaneda 3-7. Cuota de impresiones 75-100 %. El
+  presupuesto ($45.000 por día) se usa al 15-18 %.
+- **CPC medio $981**, con días de $449 a $2.068. El tope funciona.
+- **Horas:** tres clics a las 4 de la mañana costaron $2.492 (8 % del gasto) y no trajeron nada. El
+  resto se reparte entre las 10 y las 20.
+- **Celular:** 94 % de los clics.
+- **Anuncios:** los cinco en «Excelente» o «Bueno». El anuncio A de Lanús (830013640991) tuvo el
+  pedido de tasación con 4,6 % de clics; el de Lomas, 10,8 % de clics y el otro pedido.
+- **Sucesiones:** 47 impresiones, 1 clic, $831, sin pedidos.
+- **Planilla:** dos filas nuevas (10/11 y 11/11) con zona «Lanús» y «Lomas de Zamora» en la columna
+  Z: la atribución por zona funciona de punta a punta. Ningún estado cargado todavía: 47 leads «Sin
+  contestar» desde el 1/10, incluidos los dos nuevos.
+- **Automatizaciones:** informe semanal corrió el lunes 9/11 (éxito); subida offline corrió todos los
+  días a las 10:15 (nada para subir); el escenario de la web disparó bien los dos leads. Meta sigue
+  pausado.
+
+### Aplicado el 12/11 (verificado)
+
+1. **«vender mi casa» amplia vuelve a pausa** en Lanús. Queda la amplia «quiero vender mi casa» en
+   Lanús, que casi no se muestra. Criterio cumplido: más del 30 % de términos de competidores,
+   direcciones y «cerca de mí».
+2. **6 negativas nuevas** («cerca de mi», «cerca de mí», «cerca mio», «antorena», «yrigoyen y
+   castelli», «alvear 2040»). Lista en 576.
+3. **Horario de anuncios 06:00 a 24:00** todos los días en las tres campañas. Entre la 1 y las 6 no se
+   muestran. Los formularios de madrugada se pueden seguir completando desde la página orgánica.
+
+### Conclusión
+
+Es la primera semana en que la campaña hace lo que tiene que hacer: poco tráfico, barato y de dueños,
+y dos pedidos de tasación a $15.700 cada uno. El techo sigue siendo la cantidad de búsquedas en la
+zona. Lo que decide si esto sirve es lo que pase con esos dos pedidos: si se los llama, se agenda la
+tasación y se anota en la planilla.
+
+### Pendiente de Gonzalo
+
+- Llamar a Marta (Valentín Alsina, 10/11) y a Leonardo (Banfield, 11/11) y cargar el estado en la
+  columna H y, si se agenda, «Sí - tasación DD/MM/AAAA» en la J. Son los dos primeros leads
+  atribuibles por zona.
+- Los otros 45 de la lista del 6/11 siguen «Sin contestar».
+
+Próxima revisión: viernes 20/11, 10:20 (programada).
+
+## Revisión pendiente: viernes 13/11/2026 (hecha el 12/11, ver arriba)
 
 Período a mirar: desde la tarde del 6/11 hasta el 13/11. Estado de partida: solo frases activas,
 puja Maximizar clics con tope $2.500, 563 negativas, anuncios sin titulares fijados, extensiones
