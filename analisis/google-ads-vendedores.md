@@ -867,6 +867,29 @@ tasación y se anota en la planilla.
   atribuibles por zona.
 - Los otros 45 de la lista del 6/11 siguen «Sin contestar».
 
+### Segunda tanda del 12/11, pedida por Gonzalo (puntos 1, 2 y 4 de las mejoras)
+
+1. **Avellaneda, más alcance (verificado):** 14 frases nuevas con barrios que faltaban (Villa
+   Domínico, Piñeyro, Crucecita, Gerli, Wilde PH, departamento en Avellaneda) y reactivadas en amplia
+   «quiero vender mi casa» y «tasar mi casa» solo en ese grupo. Quedan 57 frases y 2 amplias. Criterio
+   para la amplia: es la versión corta que en Lanús se mostró 3 veces en cuatro días sin ruido; si en
+   Avellaneda supera el 30 % de términos de competidores o compradores, se pausa.
+2. **Formulario de Google rehecho (verificado).** Nuevo activo 438765214380 «Tasación gratis para
+   vender», enlazado a las tres campañas; el viejo 431625776983 («Tasá con nosotros», con el texto
+   «compra venta de inmuebles» que invitaba a compradores) quedó desvinculado. Cambios: título y
+   descripción hablan solo de vender; botón «Obtener cotización»; la pregunta «¿Es de tu propiedad?»
+   pasa a ser la primera y su cuarta opción es ahora «No, quiero comprar o alquilar»; se sacó la
+   pregunta vacía de tamaño; intención «alta» (Google agrega un paso de confirmación). Los textos de
+   las preguntas no se pudieron cambiar: la API solo acepta los ya aprobados. Google rechazó cuatro
+   intentos (campo de la clave del webhook, descripción del botón de más de 30 caracteres, URL final
+   faltante y texto de pregunta nuevo); en el segundo intento el formulario viejo quedó desvinculado
+   unos 15 minutos antes de que entrara el nuevo. Make (escenario 6406919) ahora marca «No es un
+   lead» y tipo «No» cuando la respuesta contiene «comprar», así no se cuentan como pedidos de
+   tasación.
+4. **Revisión semanal de términos:** queda dentro de la revisión de los viernes. La tarea programada
+   no se pudo convertir en recurrente (limitación de la plataforma), así que se reprograma cada
+   semana a mano; la próxima es el 20/11 a las 10:20.
+
 Próxima revisión: viernes 20/11, 10:20 (programada).
 
 ## Revisión pendiente: viernes 13/11/2026 (hecha el 12/11, ver arriba)
